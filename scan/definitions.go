@@ -30,3 +30,10 @@ type VulnerabilityDetail struct {
 type Registry struct {
 	RegistryName string `json:"registryName,omitempty"`
 }
+
+type AccountCred struct {
+	URL         string `json:"url"`
+	UserName    string `json:"userName"`
+	Password    string `json:"password"`
+	AccountName string `json:"accountName"`
+}

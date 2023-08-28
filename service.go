@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"os"
 	"strings"
 
 	log "github.com/cloudbees-compliance/chlog-go/log"
@@ -70,10 +71,16 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 
 	log.Debug(requestId).Msgf("Total Asset Fetched : %d", len(receivedAssets))
 	var checks []*domain.Evaluation
-	log.Info(requestId).Msgf("Anchore analyser under development")
-	//if received asset list is present ,
 	if len(receivedAssets) > 0 {
-		//check if valid creds
+		credMap, credError := makeCredentialMap(req, requestId)
+		if credError != nil {
+			return nil, credError
+		}
+		err := validateCredMap(credMap, requestId)
+		if err != nil {
+			return nil, err
+		}
+		log.Debug().Msgf("Anchore Auth Validate  Success")
 		for _, asset := range receivedAssets {
 			assetIdentifier := asset.MasterAsset.Identifier
 			for _, profile := range asset.Profiles {
@@ -85,32 +92,28 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 				//compare with registry list
 				imageName, isAnalysed, err = getAnalysisStatus(asset, imageName, assetIdentifier, tagName, isAnalysed, err, requestId)
 				if err != nil {
-					//error when getting status
 					return nil, err
 				}
 				if isAnalysed {
-					//Get Vulnerabilities
 					vulnerabilityList, err := scan.GetVulnerabilities(requestId, imageName)
 					if err != nil {
 						return nil, err
 					}
-					if len(*vulnerabilityList) > 0 {
-						log.Debug(requestId).Msgf("Vulnerabilities got %d", len(*vulnerabilityList))
+					if len(vulnerabilityList) > 0 {
+						log.Debug(requestId).Msgf("Vulnerabilities got %d", len(vulnerabilityList))
 
 					} else {
 						log.Debug(requestId).Msgf("No Vulns")
 					}
-
 				} else {
 					log.Error(requestId).Msgf("Could not get vulnerabilities %s", assetIdentifier)
 					return nil, errors.New("could not get vulnerabilities")
 				}
-
 			}
-
 		}
 
 	}
+	log.Info(requestId).Msgf("Anchore analyser under development")
 	return &service.ExecuteAnalyserResponse{
 		Checks: checks,
 	}, nil
@@ -154,6 +157,24 @@ func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier st
 		}
 	}
 	return imageName, isAnalysed, err
+}
+
+func makeCredentialMap(req *service.ExecuteRequest, requestId string) (scan.AccountCred, error) {
+	var credMap scan.AccountCred
+	if err := json.Unmarshal(req.Metadata, &credMap); err != nil {
+		log.Error(requestId).Err(err).Msgf("Error Parsing Credentials")
+		return scan.AccountCred{}, err
+	}
+	credMap.URL = utilities.GetValidURL(credMap.URL)
+	return credMap, nil
+}
+
+func validateCredMap(credMap scan.AccountCred, requestId string) error {
+	os.Setenv("ANCHORECTL_ACCOUNT", credMap.AccountName)
+	os.Setenv("ANCHORECTL_PASSWORD", credMap.Password)
+	os.Setenv("ANCHORECTL_URL", credMap.URL)
+	os.Setenv("ANCHORECTL_USERNAME", credMap.UserName)
+	return scan.GetSystemStatus(requestId)
 }
 
 func makeSubLogger(req *service.ExecuteRequest, ctx context.Context) context.Context {
