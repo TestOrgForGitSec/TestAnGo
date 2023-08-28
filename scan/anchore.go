@@ -12,6 +12,7 @@ type AnchoreScanInterface interface {
 	GetImage(requestId string, imageName string) ([]byte, error)
 	GetVulnerabilities(requestId string, imageName string) ([]byte, error)
 	GetRegistries(requestId string) ([]byte, error)
+	GetSystemStatus(requestId string) ([]byte, error)
 }
 
 type AnchoreWrapper struct {
@@ -85,7 +86,8 @@ func GetScanStatus(requestId string, imageName string) (*GetAnalysisStatus, bool
 	return &analysisStatus, true, nil
 }
 
-func GetVulnerabilities(requestId string, imageName string) (*[]VulnerabilityDetail, error) {
+func GetVulnerabilities(requestId string, imageName string) ([]VulnerabilityDetail, error) {
+	log.Debug(requestId).Msgf("Getting vulnerabilities...")
 	var vulnerabilityList []VulnerabilityDetail
 	vulnerabilities, err := IAnchoreInterface.GetVulnerabilities(requestId, imageName)
 	if err != nil {
@@ -102,11 +104,12 @@ func GetVulnerabilities(requestId string, imageName string) (*[]VulnerabilityDet
 		return nil, jsonerr
 	}
 
-	return &vulnerabilityList, nil
+	return vulnerabilityList, nil
 
 }
 
 func GetRegistries(requestId string) (*[]Registry, error) {
+	log.Debug(requestId).Msgf("Getting registries...")
 	var registryList []Registry
 	registries, err := IAnchoreInterface.GetRegistries(requestId)
 	if err != nil {
@@ -125,4 +128,17 @@ func GetRegistries(requestId string) (*[]Registry, error) {
 
 	return &registryList, nil
 
+}
+
+func GetSystemStatus(requestId string) error {
+	log.Debug(requestId).Msgf("Getting system status...")
+
+	sysStatus, err := IAnchoreInterface.GetSystemStatus(requestId)
+	if err != nil {
+		if sysStatus != nil {
+			log.Error(requestId).Err(err).Msg("stdout/err:" + string(sysStatus))
+		}
+		return err
+	}
+	return nil
 }
