@@ -88,8 +88,6 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 				tagName := profile.Identifier
 				var imageName string
 				var isAnalysed bool
-				//https://jfrog.demo.ceebe.com/artifactory/fodler.
-				//compare with registry list
 				imageName, isAnalysed, err = getAnalysisStatus(asset, imageName, assetIdentifier, tagName, isAnalysed, err, requestId)
 				if err != nil {
 					return nil, err
@@ -101,9 +99,15 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 					}
 					if len(vulnerabilityList) > 0 {
 						log.Debug(requestId).Msgf("Vulnerabilities got %d", len(vulnerabilityList))
+						checks, err = buildEvaluations(ctx, &vulnerabilityList, asset, profile)
+						if err != nil {
+							log.Error(requestId).Err(err).Msgf("Error occurred while building evaluations %s", asset.MasterAsset.Identifier)
+							return nil, err
+						}
+						log.Info(requestId).Msgf("Total number of evaluations returned %d", len(checks))
 
 					} else {
-						log.Debug(requestId).Msgf("No Vulns")
+						log.Debug(requestId).Msgf("No Vulnerabilities")
 					}
 				} else {
 					log.Error(requestId).Msgf("Could not get vulnerabilities %s", assetIdentifier)
@@ -113,7 +117,7 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 		}
 
 	}
-	log.Info(requestId).Msgf("Anchore analyser under development")
+
 	return &service.ExecuteAnalyserResponse{
 		Checks: checks,
 	}, nil
@@ -175,6 +179,19 @@ func validateCredMap(credMap scan.AccountCred, requestId string) error {
 	os.Setenv("ANCHORECTL_URL", credMap.URL)
 	os.Setenv("ANCHORECTL_USERNAME", credMap.UserName)
 	return scan.GetSystemStatus(requestId)
+}
+
+func buildEvaluations(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile) ([]*domain.Evaluation, error) {
+
+	evalList := []*domain.Evaluation{}
+	evaluationMap := utilities.MapToEvaluation(ctx, vulnList, asset, ap, map[string]*domain.Evaluation{})
+
+	if len(evaluationMap) > 0 {
+		for _, evaluation := range evaluationMap {
+			evalList = append(evalList, evaluation)
+		}
+	}
+	return evalList, nil
 }
 
 func makeSubLogger(req *service.ExecuteRequest, ctx context.Context) context.Context {
