@@ -2,8 +2,9 @@ package main
 
 const CHRequestId = "ch-request-id"
 const AssetType = "BINARY"
-const FilePerm = 0755
-const MaskedValue = "**********"
+const Summary = "SUMMARY"
+const Detail = "DETAIL"
+const String = "string"
 
 var SeverityMap = map[string]int{
 	"":          0,

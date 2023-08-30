@@ -22,22 +22,22 @@ type GetAnalysisStatus struct {
 }
 
 type VulnerabilityDetail struct {
-	DetectedAt     string    `json:"detectedAt,omitempty"`
-	Feed           string    `json:"feed,omitempty"`
-	FeedGroup      string    `json:"feedGroup,omitempty"`
-	Fix            string    `json:"fix,omitempty"`
-	Package        string    `json:"package,omitempty"`
-	PackageCpe     string    `json:"packageCpe,omitempty"`
-	PackageName    string    `json:"packageName,omitempty"`
-	PackagePath    string    `json:"packagePath,omitempty"`
-	PackageType    string    `json:"packageType,omitempty"`
-	PackageVersion string    `json:"packageVersion,omitempty"`
-	Severity       string    `json:"severity,omitempty"`
-	Url            string    `json:"url,omitempty"`
-	CveId          string    `json:"vuln,omitempty"`
-	WillNotFix     bool      `json:"willNotFix,omitempty"`
-	VendorData     []string  `json:"vendorData,omitempty"`
-	NvdData        []NvdData `json:"nvdData,omitempty"`
+	DetectedAt     string        `json:"detectedAt,omitempty"`
+	Feed           string        `json:"feed,omitempty"`
+	FeedGroup      string        `json:"feedGroup,omitempty"`
+	Fix            string        `json:"fix,omitempty"`
+	Package        string        `json:"package,omitempty"`
+	PackageCpe     string        `json:"packageCpe,omitempty"`
+	PackageName    string        `json:"packageName,omitempty"`
+	PackagePath    string        `json:"packagePath,omitempty"`
+	PackageType    string        `json:"packageType,omitempty"`
+	PackageVersion string        `json:"packageVersion,omitempty"`
+	Severity       string        `json:"severity,omitempty"`
+	Url            string        `json:"url,omitempty"`
+	CveId          string        `json:"vuln,omitempty"`
+	WillNotFix     bool          `json:"willNotFix,omitempty"`
+	VendorData     []interface{} `json:"vendorData"`
+	NvdData        []NvdData     `json:"nvdData,omitempty"`
 }
 
 type NvdData struct {
@@ -61,12 +61,4 @@ type AccountCred struct {
 	UserName    string `json:"userName"`
 	Password    string `json:"password"`
 	AccountName string `json:"accountName"`
-}
-
-var SeverityMap = map[string]int{
-	"":          0,
-	"LOW":       1,
-	"MEDIUM":    2,
-	"HIGH":      3,
-	"VERY_HIGH": 4,
 }

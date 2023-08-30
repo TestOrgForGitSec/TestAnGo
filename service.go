@@ -184,7 +184,7 @@ func validateCredMap(credMap scan.AccountCred, requestId string) error {
 func buildEvaluations(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile) ([]*domain.Evaluation, error) {
 
 	evalList := []*domain.Evaluation{}
-	evaluationMap := utilities.MapToEvaluation(ctx, vulnList, asset, ap, map[string]*domain.Evaluation{})
+	evaluationMap := mapToEvaluation(ctx, vulnList, asset, ap, map[string]*domain.Evaluation{})
 
 	if len(evaluationMap) > 0 {
 		for _, evaluation := range evaluationMap {
