@@ -125,6 +125,7 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 
 func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier string, tagName string, isAnalysed bool, err error, requestId string) (string, bool, error) {
 	if strings.Compare(scan.DockerRepo, asset.MasterAsset.SubType) == 0 {
+		assetIdentifier = strings.Replace(assetIdentifier, "library/", scan.EmptyString, -1)
 		imageName = assetIdentifier + ":" + tagName
 		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
 	} else if strings.Compare(scan.JfrogRepo, asset.MasterAsset.SubType) == 0 {
