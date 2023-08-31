@@ -1,6 +1,6 @@
 ARG BASE_FINAL_IMAGE=alpine:3.17
 ARG BASE_BUILD_IMAGE=golang:1.19-alpine
-
+ARG ANCHORE_VERSION=v1.8.0
 ######## Build ########
 FROM ${BASE_BUILD_IMAGE} AS GOLANG
 WORKDIR /src
@@ -26,12 +26,21 @@ RUN GIT_COMMIT=$(git rev-list -1 HEAD) \
         -X 'main.BuildDate=${BUILD_DATE}' \
         -X 'main.GitDescribe=${GIT_DESCRIBE}'" \
     && go version /tmp/myapp
+##############Install Dependency##################################
+FROM alpine:3.17 as deps
+WORKDIR /app
+ARG ANCHORE_VERSION
+RUN apk --no-cache add curl \
+    && curl -sSfL  https://anchorectl-releases.anchore.io/anchorectl/install.sh  | sh -s -- -b /app ${ANCHORE_VERSION} 
 
 ######## Final Image  ############################################
 FROM ${BASE_FINAL_IMAGE}
 WORKDIR /app/
+LABEL cbc.deps.anchore_version=${ANCHORE_VERSION}
 RUN apk --no-cache add ca-certificates wget \
   && adduser -D nonpriv # create user and group
 USER nonpriv
 COPY --from=GOLANG /tmp/myapp /app/myapp
+COPY --from=deps /app/anchorectl /app/anchorectl
+
 ENTRYPOINT ["/app/myapp"]
