@@ -36,6 +36,7 @@ RUN apk --no-cache add curl \
 ######## Final Image  ############################################
 FROM ${BASE_FINAL_IMAGE}
 WORKDIR /app/
+LABEL cbc.deps.anchore_version=${ANCHORE_VERSION}
 RUN apk --no-cache add ca-certificates wget \
   && adduser -D nonpriv # create user and group
 USER nonpriv
