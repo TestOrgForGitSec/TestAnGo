@@ -13,7 +13,7 @@ const ContentType = "application/json"
 const RetryCount = 8
 const SleepDuration = 30
 const DockerRepo = "dockerhub_repo"
-const JfrogRepo = "jfrog_server"
+const JfrogRepo = "artifactory_repo"
 const NexusRepo = "nexus_repo_binary"
 
 type GetAnalysisStatus struct {
