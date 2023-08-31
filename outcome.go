@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"strconv"
 	"strings"
 
@@ -13,16 +12,16 @@ import (
 	utilities "github.com/cloudbees-compliance/compliance-hub-plugin-anchore/utilities"
 )
 
-func groupResourcesByVulnerability(vulnList *[]scan.VulnerabilityDetail) (map[string][]*domain.DetailRow, map[string][]scan.VulnerabilityDetail) {
+func groupResourcesByVulnerability(vulnList *[]scan.VulnerabilityDetail, requestId string) (map[string][]*domain.DetailRow, map[string][]scan.VulnerabilityDetail) {
 
 	resourceMap := map[string][]*domain.DetailRow{}
 	baseDataMap := map[string][]scan.VulnerabilityDetail{}
 
 	for _, v := range *vulnList {
 		detail, ok := resourceMap[v.CveId]
-		nvdDataStr := fmt.Sprintf("%+v", v.NvdData)
-		vendorStr := fmt.Sprintf("%+v", v.VendorData)
-		data := []string{v.Package, vendorStr, v.FeedGroup, v.PackageCpe, v.Url, nvdDataStr, strconv.FormatBool(v.WillNotFix)}
+		nvdDataStr := makeJsonString(v.NvdData, requestId, "NvdData")
+		vendorStr := makeJsonString(v.VendorData, requestId, "VendorData")
+		data := []string{v.Package, vendorStr, v.FeedGroup, v.PackageCpe, v.PackageName, v.Url, nvdDataStr, strconv.FormatBool(v.WillNotFix)}
 		if !ok {
 			resourceMap[v.CveId] = append([]*domain.DetailRow{}, &domain.DetailRow{Data: data})
 		} else {
@@ -40,8 +39,8 @@ func groupResourcesByVulnerability(vulnList *[]scan.VulnerabilityDetail) (map[st
 }
 
 func mapToEvaluation(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile, evalMap map[string]*domain.Evaluation) map[string]*domain.Evaluation {
-	resourceMap, baseDataMap := groupResourcesByVulnerability(vulnList)
 	reqId := utilities.GetRequestId(ctx)
+	resourceMap, baseDataMap := groupResourcesByVulnerability(vulnList, reqId)
 	var eval *domain.Evaluation
 	var ok bool
 	vulnCategory := "VULNERABILITY"
@@ -59,9 +58,9 @@ func mapToEvaluation(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, 
 				Code:           v.CveId,
 				Name:           v.CveId,
 				Importance:     mapSeverity(reqId, v.Severity),
-				DetailHeaders:  []string{"Package", "Vendor Data", "Feed Group", "Package CPE", "URL", "NVD Data", "Will Not Fix"},
-				DetailTypes:    []string{String, "json", String, String, "csv[link]", "json", String},
-				DetailContexts: []string{Summary, Detail, Summary, Summary, Detail, Detail, Detail},
+				DetailHeaders:  []string{"Package", "Vendor Data", "Feed Group", "Package CPE", "Package Name", "URL", "NVD Data", "Will Not Fix"},
+				DetailTypes:    []string{String, "json", String, String, String, "csv[link]", "json", String},
+				DetailContexts: []string{Summary, Detail, Summary, Summary, Detail, Detail, Detail, Detail},
 				Category:       &vulnCategory,
 				Failures:       []*domain.AssetResult{ar},
 				BaseData:       getBaseData(baseDataMap[v.CveId]),
@@ -110,4 +109,13 @@ func updateExistingEval(v scan.VulnerabilityDetail, reqId string, eval *domain.E
 
 func isNewSevVulnerable(oldSev string, newSev string) bool {
 	return SeverityMap[oldSev] < SeverityMap[newSev]
+}
+
+func makeJsonString(v any, requestId string, field string) string {
+	b, err := json.Marshal(v)
+	if err != nil || b == nil {
+		log.Debug(requestId).Msgf("Error occurred while marshalling the field %s", field)
+		return ""
+	}
+	return string(b)
 }

@@ -80,7 +80,7 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 		if err != nil {
 			return nil, err
 		}
-		log.Debug().Msgf("Anchore Auth Validate  Success")
+		log.Debug().Msgf("Anchore Auth Validate Success")
 		for _, asset := range receivedAssets {
 			assetIdentifier := asset.MasterAsset.Identifier
 			for _, profile := range asset.Profiles {
