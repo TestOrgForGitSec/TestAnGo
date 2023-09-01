@@ -3,6 +3,9 @@ package config
 import (
 	"strings"
 
+	"github.com/cloudbees-compliance/chlog-go/log"
+	"github.com/cloudbees-compliance/go-common/secretsmanager"
+	chstring "github.com/cloudbees-compliance/go-common/strings"
 	"github.com/spf13/viper"
 )
 
@@ -30,4 +33,28 @@ func InitConfig() {
 	Config.SetDefault("log.level", "debug")
 	Config.SetDefault("log.useconsolewriter", false)
 	Config.SetDefault("log.unixtime", false)
+
+	_ = viper.BindEnv("aws.region", "AWS_REGION")          // err will be ignored
+	_ = Config.BindEnv("secret.manager", "SECRET_MANAGER") // err will be ignored
+
+	readSecrets(Config)
+}
+
+func readSecrets(config *viper.Viper) {
+	source := config.GetString("secret.manager")
+
+	if !chstring.IsEmpty(&source) {
+		reader := secretsmanager.GetReader(source)
+		if reader != nil {
+			secureConfigs, err := reader.Read()
+			if err != nil {
+				log.Error().Err(err).Msgf("Failed to use secret manager %v", err)
+			} else {
+				err = config.MergeConfigMap(secureConfigs)
+				if err != nil {
+					log.Error().Err(err).Msgf("Failed to update secret config %v", err)
+				}
+			}
+		}
+	}
 }
