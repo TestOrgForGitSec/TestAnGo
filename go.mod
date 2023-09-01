@@ -6,6 +6,7 @@ require (
 	github.com/cloudbees-compliance/chlog-go v0.4.9
 	github.com/cloudbees-compliance/chplugin-go v1.23.0
 	github.com/cloudbees-compliance/chplugin-service-go v1.16.1
+	github.com/cloudbees-compliance/go-common v0.17.1
 	github.com/google/uuid v1.3.1
 	github.com/spf13/viper v1.16.0
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.43.0
@@ -14,6 +15,7 @@ require (
 
 require (
 	cloud.google.com/go/compute v1.23.0 // indirect
+	github.com/aws/aws-sdk-go v1.45.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gammazero/deque v0.2.1 // indirect
@@ -23,6 +25,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.17.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
