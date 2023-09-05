@@ -37,10 +37,22 @@ RUN apk --no-cache add curl \
 FROM ${BASE_FINAL_IMAGE}
 WORKDIR /app/
 LABEL cbc.deps.anchore_version=${ANCHORE_VERSION}
-RUN apk --no-cache add ca-certificates wget \
-  && adduser -D nonpriv # create user and group
-USER nonpriv
-COPY --from=GOLANG /tmp/myapp /app/myapp
-COPY --from=deps /app/anchorectl /app/anchorectl
+ARG UID=1000
+ARG GID=1000
+# create non-priv user and group and set homedir as /tmp
+RUN groupadd -g "${GID}" non-priv \
+  && useradd --create-home -d /tmp --no-log-init -u "${UID}" -g "${GID}" non-priv
+# create tmp-pre-boot folder to allow copying into /tmp on bootup and fix permissions
+# before changing user (but user must have been created already)
+RUN mkdir /tmp-pre-boot || true && chown -R non-priv:non-priv /tmp-pre-boot
+RUN apk --no-cache add ca-certificates wget
+USER non-priv
+COPY --chown=${UID}:${GID} --from=GOLANG /src/entrypoint.sh /app/entrypoint.sh
+COPY -chown=${UID}:${GID} --from=GOLANG /tmp/myapp /app/myapp
+COPY -chown=${UID}:${GID} --from=deps /app/anchorectl /app/anchorectl
 
-ENTRYPOINT ["/app/myapp"]
+# move /tmp content into /tmp-pre-boot so entrypoint.sh can copy it back after mounting /tmp
+RUN cp -R /tmp/. /tmp-pre-boot/
+
+ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["/app/myapp"]
