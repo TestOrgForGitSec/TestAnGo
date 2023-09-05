@@ -50,7 +50,7 @@ RUN mkdir /tmp-pre-boot || true && chown -R non-priv:non-priv /tmp-pre-boot
 USER non-priv
 RUN apk --no-cache add ca-certificates wget
 
-COPY --chown=${UID}:${GID} --from=build /src/entrypoint.sh /app/entrypoint.sh
+COPY --chown=${UID}:${GID} --from=GOLANG /src/entrypoint.sh /app/entrypoint.sh
 COPY --chown=${UID}:${GID} --from=GOLANG /tmp/myapp /app/myapp
 COPY --chown=${UID}:${GID} --from=deps /app/anchorectl /app/anchorectl
 
