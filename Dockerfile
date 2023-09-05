@@ -28,10 +28,10 @@ RUN GIT_COMMIT=$(git rev-list -1 HEAD) \
     && go version /tmp/myapp
 ##############Install Dependency##################################
 FROM alpine:3.17 as deps
-WORKDIR /temp
+WORKDIR /app
 ARG ANCHORE_VERSION
 RUN apk --no-cache add curl \
-    && curl -sSfL  https://anchorectl-releases.anchore.io/anchorectl/install.sh  | sh -s -- -b /temp ${ANCHORE_VERSION} 
+    && curl -sSfL  https://anchorectl-releases.anchore.io/anchorectl/install.sh  | sh -s -- -b /app ${ANCHORE_VERSION} 
 
 ######## Final Image  ############################################
 FROM ${BASE_FINAL_IMAGE}
@@ -52,7 +52,7 @@ RUN apk --no-cache add ca-certificates wget
 
 COPY --chown=${UID}:${GID} --from=build /src/entrypoint.sh /app/entrypoint.sh
 COPY --chown=${UID}:${GID} --from=GOLANG /tmp/myapp /app/myapp
-COPY --chown=${UID}:${GID} --from=deps /temp/anchorectl /app/anchorectl
+COPY --chown=${UID}:${GID} --from=deps /app/anchorectl /app/anchorectl
 
 # move /tmp content into /tmp-pre-boot so entrypoint.sh can copy it back after mounting /tmp
 RUN cp -R /tmp/. /tmp-pre-boot/
