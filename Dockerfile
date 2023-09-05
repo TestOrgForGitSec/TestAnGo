@@ -41,6 +41,6 @@ RUN apk --no-cache add ca-certificates curl \
   && adduser -D nonpriv # create user and group
 USER nonpriv
 COPY --from=GOLANG /tmp/myapp /app/myapp
-COPY --from=deps /app/anchorectl /tmp/anchorectl
+COPY --from=deps /app/anchorectl /usr/local/bin/anchorectl
 
 ENTRYPOINT ["/app/myapp"]
