@@ -42,8 +42,8 @@ ARG UID=1000
 ARG GID=1000
 
 # create non-priv user and group and set homedir as /tmp
-RUN groupadd -g "${GID}" non-priv \
-  && useradd --create-home -d /tmp --no-log-init -u "${UID}" -g "${GID}" non-priv
+RUN addgroup -G "${GID}" non-priv \
+&&  adduser -create-home -d /tmp --no-log-init -u "${UID}" -G "${GID}" non-priv
 # create tmp-pre-boot folder to allow copying into /tmp on bootup and fix permissions
 # before changing user (but user must have been created already)
 RUN mkdir /tmp-pre-boot || true && chown -R non-priv:non-priv /tmp-pre-boot
