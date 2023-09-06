@@ -84,6 +84,7 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 		for _, asset := range receivedAssets {
 			assetIdentifier := asset.MasterAsset.Identifier
 			for _, profile := range asset.Profiles {
+				log.Debug(requestId).Msgf("Profie Details : %v", profile)
 				log.Debug(requestId).Msgf("Binary Attributes Count : %v", len(profile.BinAttributes))
 				tagName := profile.Identifier
 				var imageName string
