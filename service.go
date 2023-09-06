@@ -179,6 +179,7 @@ func validateCredMap(credMap scan.AccountCred, requestId string) error {
 	os.Setenv("ANCHORECTL_PASSWORD", credMap.Password)
 	os.Setenv("ANCHORECTL_URL", credMap.URL)
 	os.Setenv("ANCHORECTL_USERNAME", credMap.UserName)
+	os.Setenv("ANCHORECTL_UPDATE_CHECK", "false")
 	return scan.GetSystemStatus(requestId)
 }
 
