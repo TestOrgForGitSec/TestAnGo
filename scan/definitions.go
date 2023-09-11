@@ -15,6 +15,7 @@ const SleepDuration = 30
 const DockerRepo = "dockerhub_repo"
 const JfrogRepo = "artifactory_repo"
 const NexusRepo = "nexus_repo_binary"
+const AwsEcrRepo = "aws_ecr_repo"
 
 type GetAnalysisStatus struct {
 	AnalysisStatus string `json:"analysisStatus,omitempty"`
@@ -53,7 +54,9 @@ type CvsScore struct {
 }
 
 type Registry struct {
+	Registry     string `json:"registry,omitempty"`
 	RegistryName string `json:"registryName,omitempty"`
+	RegistryType string `json:"registryType,omitempty"`
 }
 
 type AccountCred struct {

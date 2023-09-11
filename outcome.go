@@ -21,7 +21,7 @@ func groupResourcesByVulnerability(vulnList *[]scan.VulnerabilityDetail, request
 		detail, ok := resourceMap[v.CveId]
 		nvdDataStr := makeJsonString(v.NvdData, requestId, "NvdData")
 		vendorStr := makeJsonString(v.VendorData, requestId, "VendorData")
-		data := []string{v.Package, vendorStr, v.FeedGroup, v.PackageCpe, v.PackageName, v.Url, nvdDataStr, strconv.FormatBool(v.WillNotFix)}
+		data := []string{v.Package, v.FeedGroup, v.PackageCpe, v.PackageName, v.Url, vendorStr, nvdDataStr, strconv.FormatBool(v.WillNotFix)}
 		if !ok {
 			resourceMap[v.CveId] = append([]*domain.DetailRow{}, &domain.DetailRow{Data: data})
 		} else {
@@ -58,9 +58,9 @@ func mapToEvaluation(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, 
 				Code:           v.CveId,
 				Name:           v.CveId,
 				Importance:     mapSeverity(reqId, v.Severity),
-				DetailHeaders:  []string{"Package", "Vendor Data", "Feed Group", "Package CPE", "Package Name", "URL", "NVD Data", "Will Not Fix"},
-				DetailTypes:    []string{String, "json", String, String, String, "csv[link]", "json", String},
-				DetailContexts: []string{Summary, Detail, Summary, Summary, Detail, Detail, Detail, Detail},
+				DetailHeaders:  []string{"Package", "Feed Group", "Package CPE", "Package Name", "URL", "Vendor Data", "NVD Data", "Will Not Fix"},
+				DetailTypes:    []string{String, String, String, String, "csv[link]", "json", "json", String},
+				DetailContexts: []string{Summary, Summary, Summary, Detail, Detail, Detail, Detail, Detail},
 				Category:       &vulnCategory,
 				Failures:       []*domain.AssetResult{ar},
 				BaseData:       getBaseData(baseDataMap[v.CveId]),
@@ -83,7 +83,7 @@ func mapSeverity(reqId string, severity string) string {
 		return "VERY_HIGH"
 	case "medium", "moderate":
 		return "MEDIUM"
-	case "low", "info":
+	case "low", "info", "negligible":
 		return "LOW"
 	default:
 		log.Warn(reqId).Msgf("Severity value : %s is defaulting to LOW", lower)

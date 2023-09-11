@@ -13,3 +13,9 @@ var SeverityMap = map[string]int{
 	"HIGH":      3,
 	"VERY_HIGH": 4,
 }
+
+var NexusPorts = []string{
+	":5002",
+	":5003",
+	":5004",
+}
