@@ -1,6 +1,6 @@
 module github.com/cloudbees-compliance/compliance-hub-plugin-anchore
 
-go 1.21.1
+go 1.21
 
 require (
 	github.com/cloudbees-compliance/chlog-go v0.4.9
@@ -14,6 +14,7 @@ require (
 )
 
 require (
+	cloud.google.com/go/compute v1.23.0 // indirect
 	github.com/aws/aws-sdk-go v1.45.6 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
@@ -37,7 +38,6 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	go.opentelemetry.io/otel v1.17.0 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/internal/retry v1.17.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.17.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.17.0 // indirect
 	go.opentelemetry.io/otel/metric v1.17.0 // indirect
