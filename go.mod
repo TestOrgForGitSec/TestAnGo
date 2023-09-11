@@ -1,6 +1,6 @@
 module github.com/cloudbees-compliance/compliance-hub-plugin-anchore
 
-go 1.21.0
+go 1.21.1
 
 require (
 	github.com/cloudbees-compliance/chlog-go v0.4.9
