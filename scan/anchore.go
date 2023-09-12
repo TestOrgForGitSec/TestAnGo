@@ -51,7 +51,7 @@ func GetScanStatus(requestId string, imageName string) (*GetAnalysisStatus, bool
 		log.Error().Msgf("AnchorePlugin: Error when marshaling response %s - %s", analysisStatus.AnalysisStatus, analysisStatus.ImageStatus)
 		return nil, false, jsonerr
 	}
-	log.Debug().Msgf("AnchorePlugin: Get image status %s - %s", analysisStatus.AnalysisStatus, analysisStatus.ImageStatus)
+	log.Debug(requestId).Msgf("AnchorePlugin: Get image status %s - %s", analysisStatus.AnalysisStatus, analysisStatus.ImageStatus)
 	if strings.Compare("active", analysisStatus.ImageStatus) == 0 &&
 		strings.Compare("analyzed", analysisStatus.AnalysisStatus) == 0 {
 		return &analysisStatus, true, nil

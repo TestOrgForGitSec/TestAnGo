@@ -80,7 +80,7 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 		if err != nil {
 			return nil, err
 		}
-		log.Debug().Msgf("Anchore Auth Validate Success")
+		log.Debug(requestId).Msgf("Anchore Auth Validate Success")
 		for _, asset := range receivedAssets {
 			assetIdentifier := asset.MasterAsset.Identifier
 			for _, profile := range asset.Profiles {
@@ -137,27 +137,64 @@ func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier st
 		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
 
 	} else if strings.Compare(scan.NexusRepo, asset.MasterAsset.SubType) == 0 {
+		var hostNameList []string
 		assetIdArr := strings.SplitAfter(assetIdentifier, "://")
 		imageNameStr := assetIdArr[1]
 		hostName := imageNameStr[0:strings.Index(imageNameStr, "/")]
+		assetName := imageNameStr[strings.Index(imageNameStr, ":v2")+len(":v2"):]
 		registryList, err := scan.GetRegistries(requestId)
 		if err != nil {
-			log.Debug(requestId).Msgf("Could not get registry ... using default")
-			hostName = hostName + ":5002"
+			log.Debug(requestId).Msgf("Could not get registry ... using default values")
+			for _, portNumber := range NexusPorts {
+				hostNameList = append(hostNameList, hostName+portNumber)
+			}
 		} else {
 			for _, registry := range *registryList {
-				if strings.HasPrefix(registry.RegistryName, hostName) {
-					hostName = registry.RegistryName
-					break
+				if strings.HasPrefix(registry.Registry, hostName) {
+					hostNameList = append(hostNameList, registry.Registry)
 				}
-
 			}
 		}
-		assetName := imageNameStr[strings.Index(imageNameStr, ":v2")+len(":v2"):]
-		imageName = hostName + assetName + ":" + tagName
+		if len(hostNameList) == 0 {
+			log.Error(requestId).Msgf("No Nexus registry found for asset %s", assetIdentifier)
+			return "", false, errors.New("no nexus registry found in anchore dashboard")
+		}
+		for _, hostNameValue := range hostNameList {
+			imageName = hostNameValue + assetName + ":" + tagName
+			_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
+			if err == nil {
+				break
+			}
+			log.Debug(requestId).Msgf("Checking Nexus image status for next registry")
+		}
+		if err != nil {
+			log.Error(requestId).Msgf("Could not get analysis status for Nexus asset %s", assetIdentifier)
+			return "", false, err
+		}
+	} else if strings.Compare(scan.AwsEcrRepo, asset.MasterAsset.SubType) == 0 {
+		splitedAssetIdentifer := strings.Split(assetIdentifier, ":")
+		assetName := strings.Replace(splitedAssetIdentifer[5], "repository", scan.EmptyString, -1)
+		registryList, err := scan.GetRegistries(requestId)
+		registryName := scan.EmptyString
+		if err != nil {
+			log.Debug(requestId).Msgf("Could not get registry ... using default format")
+			registryName = splitedAssetIdentifer[4] + ".dkr." + splitedAssetIdentifer[2] + "." + splitedAssetIdentifer[3] + ".amazonaws.com"
+		} else {
+			for _, registryData := range *registryList {
+				if strings.EqualFold(registryData.RegistryType, "awsecr") && strings.HasPrefix(registryData.Registry, splitedAssetIdentifer[4]) {
+					registryName = registryData.Registry
+					break
+				}
+			}
+			if len(registryName) == 0 {
+				log.Error(requestId).Msgf("No Aws ECR registry found for asset %s", assetIdentifier)
+				return "", false, errors.New("no Aws Ecr registry found in anchore dashboard")
+			}
+		}
+		imageName = registryName + assetName + ":" + tagName
 		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
 		if err != nil {
-			log.Error(requestId).Msgf("Could not get analysis status for %s", imageName)
+			log.Error(requestId).Msgf("Could not get analysis status for AWS ECR asset %s", assetIdentifier)
 			return "", false, err
 		}
 	}
