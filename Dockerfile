@@ -27,7 +27,7 @@ RUN GIT_COMMIT=$(git rev-list -1 HEAD) \
         -X 'main.GitDescribe=${GIT_DESCRIBE}'" \
     && go version /tmp/myapp
 ##############Install Dependency##################################
-FROM alpine:3.17 as deps
+FROM alpine:3.17 AS deps
 WORKDIR /app
 ARG ANCHORE_VERSION
 RUN apk --no-cache add curl \
