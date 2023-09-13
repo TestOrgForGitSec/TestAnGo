@@ -45,6 +45,7 @@ func mapToEvaluation(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, 
 	var ok bool
 	vulnCategory := "VULNERABILITY"
 	for _, v := range *vulnList {
+		fixVal := v.Fix
 		if eval, ok = evalMap[v.CveId]; !ok {
 			ar := &domain.AssetResult{
 				Asset:          asset.MasterAsset,
@@ -64,7 +65,7 @@ func mapToEvaluation(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, 
 				Category:       &vulnCategory,
 				Failures:       []*domain.AssetResult{ar},
 				BaseData:       getBaseData(baseDataMap[v.CveId]),
-				Remediation:    &v.Fix,
+				Remediation:    &fixVal,
 			}
 		} else {
 			updateExistingEval(v, reqId, eval)

@@ -1,0 +1,71 @@
+[
+  {
+    "createdAt": "2023-08-24T14:19:15Z",
+    "registry": "nexus-repo-oss.demo.cbc.beescloud.com:5002",
+    "registryName": "nexus-repo-oss.demo.cbc.beescloud.com:5002",
+    "registryType": "docker_v2",
+    "registryUser": "admin",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "createdAt": "2023-08-30T15:44:01Z",
+    "registry": "nexus-repo-oss.demo.cbc.beescloud.com:5004",
+    "registryName": "nexus-repo-oss.demo.cbc.beescloud.com:5004",
+    "registryType": "docker_v2",
+    "registryUser": "admin",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "createdAt": "2023-08-02T06:45:11Z",
+    "registry": "jfrog.demo.cbc.beescloud.com",
+    "registryName": "JFrog Repo",
+    "registryType": "docker_v2",
+    "registryUser": "admin",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "registry": "544163399415.dkr.ecr.us-east-1.amazonaws.com",
+    "registryName": "ECR Demo",
+    "registryType": "awsecr",
+    "registryUser": "AKIAX5MVKQ33R5W2MNUX",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "createdAt": "2023-07-28T11:56:48Z",
+    "registry": "700386920060.dkr.ecr.us-east-1.amazonaws.com",
+    "registryName": "CBC AWS ECR",
+    "registryType": "awsecr",
+    "registryUser": "AKIA2GESQIZ6AILUSCJK",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "createdAt": "2023-09-11T12:50:09Z",
+    "registry": "151589685379.dkr.ecr.us-east-1.amazonaws.com",
+    "registryName": "SBX3 AWS ECR",
+    "registryType": "awsecr",
+    "registryUser": "AKIASGS3TBCBQQWSMXGJ",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "registry": "docker.io",
+    "registryName": "CBC Private Docker Repo",
+    "registryType": "docker_v2",
+    "registryUser": "cbcdevdockerhub",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  },
+  {
+    "registry": "nexus-repo-oss.demo.cbc.beescloud.com:5003",
+    "registryName": "nexus-repo-oss.demo.cbc.beescloud.com:5003",
+    "registryType": "docker_v2",
+    "registryUser": "admin",
+    "registryVerify": true,
+    "userId": "cbc-sbom-eval"
+  }
+]
