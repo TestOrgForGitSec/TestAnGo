@@ -1,0 +1,66 @@
+{
+    "analysisStatus": "analyzing",
+    "analysisStatusDetail": [
+      {
+        "fromStatus": "not_analyzed",
+        "source": {
+          "hostid": "anchore-anchore-engine-analyzer-75b676f46c-jg5jk",
+          "servicename": "analyzer"
+        },
+        "timestamp": "2023-08-25T07:22:03Z",
+        "toStatus": "analyzing"
+      },
+      {
+        "fromStatus": "analyzing",
+        "source": {
+          "hostid": "anchore-anchore-engine-analyzer-75b676f46c-jg5jk",
+          "servicename": "analyzer"
+        },
+        "timestamp": "2023-08-25T07:23:08Z",
+        "toStatus": "analyzed"
+      }
+    ],
+    "annotations": {},
+    "createdAt": "2023-08-25T07:21:56Z",
+    "imageContent": {
+      "metadata": {
+        "arch": "amd64",
+        "distro": "alpine",
+        "distroVersion": "3.17.2",
+        "dockerfileMode": "Guessed",
+        "imageSize": 7874560,
+        "layerCount": 1
+      }
+    },
+    "imageDetail": [
+      {
+        "createdAt": "2023-08-25T07:21:56Z",
+        "dockerfile": "RlJPTSBzY3JhdGNoCkFERCBmaWxlOjQwODg3YWI3YzA2OTc3NzM3ZTYzYzIxNWM5YmQyOTdjMGM3NGRlOGQxMmQxNmViZGYxYzNkNDBhYzM5MmY2MmQgaW4gLyAKQ01EIFsiL2Jpbi9zaCJdCg==",
+        "fulldigest": "jfrog.demo.cbc.beescloud.com/alpine/alpine@sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
+        "fulltag": "jfrog.demo.cbc.beescloud.com/alpine/alpine:v1",
+        "imageDigest": "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
+        "imageId": "b2aa39c304c27b96c1fef0c06bee651ac9241d49c4fe34381cab8453f9a89c7d",
+        "lastUpdated": "2023-08-25T07:23:08Z",
+        "registry": "jfrog.demo.cbc.beescloud.com",
+        "repo": "alpine/alpine",
+        "userId": "cbc-sbom-eval"
+      },
+      {
+        "createdAt": "2023-08-25T07:22:36Z",
+        "dockerfile": null,
+        "fulldigest": "nexus-repo-oss.demo.cbc.beescloud.com:5002/alpine@sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
+        "fulltag": "nexus-repo-oss.demo.cbc.beescloud.com:5002/alpine:v1",
+        "imageDigest": "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
+        "imageId": "b2aa39c304c27b96c1fef0c06bee651ac9241d49c4fe34381cab8453f9a89c7d",
+        "lastUpdated": "2023-08-25T07:22:36Z",
+        "registry": "nexus-repo-oss.demo.cbc.beescloud.com:5002",
+        "repo": "alpine",
+        "userId": "cbc-sbom-eval"
+      }
+    ],
+    "imageDigest": "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
+    "imageStatus": "something",
+    "lastUpdated": "2023-08-25T07:23:08Z",
+    "parentDigest": "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
+    "userId": "cbc-sbom-eval"
+  }

@@ -19,16 +19,16 @@ type AnchoreWrapper struct {
 }
 
 // create a package level variable of type interface
-var IAnchoreInterface AnchoreScanInterface
+var IAnchore AnchoreScanInterface
 
 func init() {
-	IAnchoreInterface = AnchoreWrapper{}
+	IAnchore = AnchoreWrapper{}
 }
 
 func GetImage(requestId string, imageName string) ([]byte, error) {
 	log.Debug(requestId).Msgf("Getting scanned image...")
 
-	out, err := IAnchoreInterface.GetImage(requestId, imageName)
+	out, err := IAnchore.GetImage(requestId, imageName)
 
 	if err != nil {
 		// only output stdout/err if there was a problem
@@ -40,7 +40,7 @@ func GetImage(requestId string, imageName string) ([]byte, error) {
 	return out, nil
 }
 
-func GetScanStatus(requestId string, imageName string) (*GetAnalysisStatus, bool, error) {
+func GetScanStatus(requestId string, imageName string, retryCount int) (*GetAnalysisStatus, bool, error) {
 	status, err := GetImage(requestId, imageName)
 	if err != nil {
 		return nil, false, err
@@ -57,7 +57,7 @@ func GetScanStatus(requestId string, imageName string) (*GetAnalysisStatus, bool
 		return &analysisStatus, true, nil
 	} else if strings.Compare("active", analysisStatus.ImageStatus) == 0 &&
 		strings.Compare("analyzed", analysisStatus.AnalysisStatus) != 0 {
-		var attempts = RetryCount
+		var attempts = retryCount
 		sleep := time.Second * SleepDuration
 		log.Debug(requestId).Msgf("Starting Retry for %d times ...", attempts)
 		for i := 0; i < attempts; i++ {
@@ -89,7 +89,7 @@ func GetScanStatus(requestId string, imageName string) (*GetAnalysisStatus, bool
 func GetVulnerabilities(requestId string, imageName string) ([]VulnerabilityDetail, error) {
 	log.Debug(requestId).Msgf("Getting vulnerabilities...")
 	var vulnerabilityList []VulnerabilityDetail
-	vulnerabilities, err := IAnchoreInterface.GetVulnerabilities(requestId, imageName)
+	vulnerabilities, err := IAnchore.GetVulnerabilities(requestId, imageName)
 	if err != nil {
 		// only output stdout/err if there was a problem
 		if vulnerabilities != nil {
@@ -111,7 +111,7 @@ func GetVulnerabilities(requestId string, imageName string) ([]VulnerabilityDeta
 func GetRegistries(requestId string) (*[]Registry, error) {
 	log.Debug(requestId).Msgf("Getting registries...")
 	var registryList []Registry
-	registries, err := IAnchoreInterface.GetRegistries(requestId)
+	registries, err := IAnchore.GetRegistries(requestId)
 	if err != nil {
 		// only output stdout/err if there was a problem
 		if registries != nil {
@@ -133,7 +133,7 @@ func GetRegistries(requestId string) (*[]Registry, error) {
 func GetSystemStatus(requestId string) error {
 	log.Debug(requestId).Msgf("Getting system status...")
 
-	sysStatus, err := IAnchoreInterface.GetSystemStatus(requestId)
+	sysStatus, err := IAnchore.GetSystemStatus(requestId)
 	if err != nil {
 		if sysStatus != nil {
 			log.Error(requestId).Err(err).Msg("stdout/err:" + string(sysStatus))

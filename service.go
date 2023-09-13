@@ -127,14 +127,14 @@ func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier st
 	if strings.Compare(scan.DockerRepo, asset.MasterAsset.SubType) == 0 {
 		assetIdentifier = strings.Replace(assetIdentifier, "library/", scan.EmptyString, -1)
 		imageName = assetIdentifier + ":" + tagName
-		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
+		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
 	} else if strings.Compare(scan.JfrogRepo, asset.MasterAsset.SubType) == 0 {
 		assetIdArr := strings.SplitAfter(assetIdentifier, "://")
 		imageNameStr := assetIdArr[1]
 		hostName := imageNameStr[0:strings.Index(imageNameStr, "/")]
 		assetName := imageNameStr[strings.Index(imageNameStr, "/artifactory")+len("/artifactory"):]
 		imageName = hostName + assetName + ":" + tagName
-		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
+		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
 
 	} else if strings.Compare(scan.NexusRepo, asset.MasterAsset.SubType) == 0 {
 		var hostNameList []string
@@ -161,7 +161,7 @@ func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier st
 		}
 		for _, hostNameValue := range hostNameList {
 			imageName = hostNameValue + assetName + ":" + tagName
-			_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
+			_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
 			if err == nil {
 				break
 			}
@@ -192,7 +192,7 @@ func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier st
 			}
 		}
 		imageName = registryName + assetName + ":" + tagName
-		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName)
+		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
 		if err != nil {
 			log.Error(requestId).Msgf("Could not get analysis status for AWS ECR asset %s", assetIdentifier)
 			return "", false, err
