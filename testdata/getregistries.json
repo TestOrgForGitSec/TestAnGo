@@ -27,7 +27,7 @@
     "userId": "cbc-sbom-eval"
   },
   {
-    "registry": "544163399415.dkr.ecr.us-east-1.amazonaws.com",
+    "registry": "1234567.dkr.ecr.us-east-1.amazonaws.com",
     "registryName": "ECR Demo",
     "registryType": "awsecr",
     "registryUser": "AKIAX5MVKQ33R5W2MNUX",
@@ -61,8 +61,8 @@
     "userId": "cbc-sbom-eval"
   },
   {
-    "registry": "nexus-repo-oss.demo.cbc.beescloud.com:5003",
-    "registryName": "nexus-repo-oss.demo.cbc.beescloud.com:5003",
+    "registry": "nexus.com:5002",
+    "registryName": "nexus.com:5002",
     "registryType": "docker_v2",
     "registryUser": "admin",
     "registryVerify": true,
