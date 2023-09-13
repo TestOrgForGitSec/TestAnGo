@@ -1,0 +1,4742 @@
+[
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-1304"
+            }
+        ],
+        "package": "libcom-err2-1.46.2-2",
+        "packageCpe": "None",
+        "packageName": "libcom-err2",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.46.2-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-1304",
+        "vendorData": [],
+        "vuln": "CVE-2022-1304",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 8.1,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2023-31484"
+            }
+        ],
+        "package": "perl-base-5.32.1-4+deb11u2",
+        "packageCpe": "None",
+        "packageName": "perl-base",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "5.32.1-4+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31484",
+        "vendorData": [],
+        "vuln": "CVE-2023-31484",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-31438"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31438",
+        "vendorData": [],
+        "vuln": "CVE-2023-31438",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "32.0.0",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.1,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2023-2976"
+            }
+        ],
+        "package": "guava-30.1.1-android",
+        "packageCpe": "None",
+        "packageName": "guava",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/guava-30.1.1-android.jar",
+        "packageType": "java",
+        "packageVersion": "30.1.1-android",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-7g45-4rm6-3mm3",
+        "vendorData": [],
+        "vuln": "GHSA-7g45-4rm6-3mm3",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-5709"
+            }
+        ],
+        "package": "libkrb5-3-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libkrb5-3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-5709",
+        "vendorData": [],
+        "vuln": "CVE-2018-5709",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2021-36087"
+            }
+        ],
+        "package": "libsepol1-3.1-1",
+        "packageCpe": "None",
+        "packageName": "libsepol1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "3.1-1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2021-36087",
+        "vendorData": [],
+        "vuln": "CVE-2021-36087",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4,
+                    "exploitabilityScore": 1.9,
+                    "impactScore": 6.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2010-0928"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2010-0928",
+        "vendorData": [],
+        "vuln": "CVE-2010-0928",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.31",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-38749"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-c4r9-r8fh-9vj2",
+        "vendorData": [],
+        "vuln": "GHSA-c4r9-r8fh-9vj2",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.18.3-6+deb11u3",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 8.8,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-42898"
+            }
+        ],
+        "package": "libkrb5-3-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libkrb5-3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-42898",
+        "vendorData": [],
+        "vuln": "CVE-2022-42898",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2022-21540"
+            }
+        ],
+        "package": "java-17.0.2+8-86",
+        "packageCpe": "None",
+        "packageName": "java",
+        "packagePath": "/usr/local/openjdk-17/bin/java",
+        "packageType": "binary",
+        "packageVersion": "17.0.2+8-86",
+        "severity": "Medium",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-21540",
+        "vendorData": [],
+        "vuln": "CVE-2022-21540",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "3.19.6",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-3509"
+            }
+        ],
+        "package": "protobuf-java-3.19.4",
+        "packageCpe": "None",
+        "packageName": "protobuf-java",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/protobuf-java-3.19.4.jar",
+        "packageType": "java",
+        "packageVersion": "3.19.4",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-g5ww-5jh7-63cx",
+        "vendorData": [],
+        "vuln": "GHSA-g5ww-5jh7-63cx",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-20T01:53:11Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "32.0.0",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2020-8908"
+            }
+        ],
+        "package": "guava-30.1.1-android",
+        "packageCpe": "None",
+        "packageName": "guava",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/guava-30.1.1-android.jar",
+        "packageType": "java",
+        "packageVersion": "30.1.1-android",
+        "severity": "Low",
+        "url": "https://github.com/advisories/GHSA-5mg8-w23w-74h3",
+        "vendorData": [],
+        "vuln": "GHSA-5mg8-w23w-74h3",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 8.8,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-1010023"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010023",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010023",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-48303"
+            }
+        ],
+        "package": "tar-1.34+dfsg-1",
+        "packageCpe": "None",
+        "packageName": "tar",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.34+dfsg-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-48303",
+        "vendorData": [],
+        "vuln": "CVE-2022-48303",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-20796"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-20796",
+        "vendorData": [],
+        "vuln": "CVE-2018-20796",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-0465"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0465",
+        "vendorData": [],
+        "vuln": "CVE-2023-0465",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2019-1010025"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010025",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010025",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2019-1010024"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010024",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010024",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": 4.7,
+                    "exploitabilityScore": 1,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2013-4235"
+            }
+        ],
+        "package": "passwd-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "passwd",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2013-4235",
+        "vendorData": [],
+        "vuln": "CVE-2013-4235",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 9.8,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-8457"
+            }
+        ],
+        "package": "libdb5.3-5.3.28+dfsg1-0.8",
+        "packageCpe": "None",
+        "packageName": "libdb5.3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "5.3.28+dfsg1-0.8",
+        "severity": "Critical",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-8457",
+        "vendorData": [],
+        "vuln": "CVE-2019-8457",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "247.3-7+deb11u2",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-3821"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-3821",
+        "vendorData": [],
+        "vuln": "CVE-2022-3821",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 8.1,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2023-31486"
+            }
+        ],
+        "package": "perl-base-5.32.1-4+deb11u2",
+        "packageCpe": "None",
+        "packageName": "perl-base",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "5.32.1-4+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31486",
+        "vendorData": [],
+        "vuln": "CVE-2023-31486",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2020-16156"
+            }
+        ],
+        "package": "perl-base-5.32.1-4+deb11u2",
+        "packageCpe": "None",
+        "packageName": "perl-base",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "5.32.1-4+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2020-16156",
+        "vendorData": [],
+        "vuln": "CVE-2020-16156",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.31",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-38750"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-hhhw-99gj-p3c3",
+        "vendorData": [],
+        "vuln": "GHSA-hhhw-99gj-p3c3",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "mount-2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "mount",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.36.1-8+deb11u1",
+        "severity": "high",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-34169"
+            }
+        ],
+        "package": "java-17.0.2+8-86",
+        "packageCpe": "None",
+        "packageName": "java",
+        "packagePath": "/usr/local/openjdk-17/bin/java",
+        "packageType": "binary",
+        "packageVersion": "17.0.2+8-86",
+        "severity": "High",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-34169",
+        "vendorData": [],
+        "vuln": "CVE-2022-34169",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.9,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-21541"
+            }
+        ],
+        "package": "java-17.0.2+8-86",
+        "packageCpe": "None",
+        "packageName": "java",
+        "packagePath": "/usr/local/openjdk-17/bin/java",
+        "packageType": "binary",
+        "packageVersion": "17.0.2+8-86",
+        "severity": "Medium",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-21541",
+        "vendorData": [],
+        "vuln": "CVE-2022-21541",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-31439"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31439",
+        "vendorData": [],
+        "vuln": "CVE-2023-31439",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2023-29491"
+            }
+        ],
+        "package": "libtinfo6-6.2+20201114-2",
+        "packageCpe": "None",
+        "packageName": "libtinfo6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "6.2+20201114-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-29491",
+        "vendorData": [],
+        "vuln": "CVE-2023-29491",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "6.2+20201114-2+deb11u1",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.1,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2022-29458"
+            }
+        ],
+        "package": "ncurses-base-6.2+20201114-2",
+        "packageCpe": "None",
+        "packageName": "ncurses-base",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "6.2+20201114-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-29458",
+        "vendorData": [],
+        "vuln": "CVE-2022-29458",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "3.7.1-5+deb11u3",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.4,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2023-0361"
+            }
+        ],
+        "package": "libgnutls30-3.7.1-5+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libgnutls30",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "3.7.1-5+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0361",
+        "vendorData": [],
+        "vuln": "CVE-2023-0361",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-31437"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31437",
+        "vendorData": [],
+        "vuln": "CVE-2023-31437",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 10,
+                    "impactScore": 6.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2017-11164"
+            }
+        ],
+        "package": "libpcre3-2:8.39-13",
+        "packageCpe": "None",
+        "packageName": "libpcre3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2:8.39-13",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2017-11164",
+        "vendorData": [],
+        "vuln": "CVE-2017-11164",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2022-2097"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-2097",
+        "vendorData": [],
+        "vuln": "CVE-2022-2097",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2013-4392"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2013-4392",
+        "vendorData": [],
+        "vuln": "CVE-2013-4392",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "libsmartcols1-2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsmartcols1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.36.1-8+deb11u1",
+        "severity": "medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-08T16:24:58Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-36054"
+            }
+        ],
+        "package": "libkrb5-3-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libkrb5-3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-36054",
+        "vendorData": [],
+        "vuln": "CVE-2023-36054",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.4,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2023-0286"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0286",
+        "vendorData": [],
+        "vuln": "CVE-2023-0286",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-08T16:24:58Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-36054"
+            }
+        ],
+        "package": "libgssapi-krb5-2-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libgssapi-krb5-2",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-36054",
+        "vendorData": [],
+        "vuln": "CVE-2023-36054",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4899"
+            }
+        ],
+        "package": "libzstd1-1.4.8+dfsg-2.1",
+        "packageCpe": "None",
+        "packageName": "libzstd1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.4.8+dfsg-2.1",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4899",
+        "vendorData": [],
+        "vuln": "CVE-2022-4899",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4.3,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.7,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2011-3374"
+            }
+        ],
+        "package": "apt-2.2.4",
+        "packageCpe": "None",
+        "packageName": "apt",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.2.4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2011-3374",
+        "vendorData": [],
+        "vuln": "CVE-2011-3374",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-0465"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0465",
+        "vendorData": [],
+        "vuln": "CVE-2023-0465",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-01T23:26:17Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-3817"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-3817",
+        "vendorData": [],
+        "vuln": "CVE-2023-3817",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.32",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-41854"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-w37g-rhq8-7m4j",
+        "vendorData": [],
+        "vuln": "GHSA-w37g-rhq8-7m4j",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-5709"
+            }
+        ],
+        "package": "libgssapi-krb5-2-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libgssapi-krb5-2",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-5709",
+        "vendorData": [],
+        "vuln": "CVE-2018-5709",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 9.8,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-1010022"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010022",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010022",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-20796"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-20796",
+        "vendorData": [],
+        "vuln": "CVE-2018-20796",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2022-3219"
+            }
+        ],
+        "package": "gpgv-2.2.27-2+deb11u2",
+        "packageCpe": "None",
+        "packageName": "gpgv",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.2.27-2+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-3219",
+        "vendorData": [],
+        "vuln": "CVE-2022-3219",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2023-29491"
+            }
+        ],
+        "package": "ncurses-bin-6.2+20201114-2",
+        "packageCpe": "None",
+        "packageName": "ncurses-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "6.2+20201114-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-29491",
+        "vendorData": [],
+        "vuln": "CVE-2023-29491",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "libuuid1-2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libuuid1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.36.1-8+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2007-6755"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2007-6755",
+        "vendorData": [],
+        "vuln": "CVE-2007-6755",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-29383"
+            }
+        ],
+        "package": "passwd-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "passwd",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-29383",
+        "vendorData": [],
+        "vuln": "CVE-2023-29383",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.18.3-6+deb11u3",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 8.8,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-42898"
+            }
+        ],
+        "package": "libkrb5support0-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libkrb5support0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-42898",
+        "vendorData": [],
+        "vuln": "CVE-2022-42898",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2011-4116"
+            }
+        ],
+        "package": "perl-base-5.32.1-4+deb11u2",
+        "packageCpe": "None",
+        "packageName": "perl-base",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "5.32.1-4+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2011-4116",
+        "vendorData": [],
+        "vuln": "CVE-2011-4116",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-1304"
+            }
+        ],
+        "package": "libext2fs2-1.46.2-2",
+        "packageCpe": "None",
+        "packageName": "libext2fs2",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.46.2-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-1304",
+        "vendorData": [],
+        "vuln": "CVE-2022-1304",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.9,
+                    "exploitabilityScore": 5.5,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 6.1,
+                    "exploitabilityScore": 1.6,
+                    "impactScore": 4
+                },
+                "id": "CVE-2020-13529"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2020-13529",
+        "vendorData": [],
+        "vuln": "CVE-2020-13529",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-0215"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0215",
+        "vendorData": [],
+        "vuln": "CVE-2023-0215",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "247.3-7+deb11u2",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4415"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4415",
+        "vendorData": [],
+        "vuln": "CVE-2022-4415",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-2650"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-2650",
+        "vendorData": [],
+        "vuln": "CVE-2023-2650",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2,
+                    "impactScore": 4
+                },
+                "id": "CVE-2016-2781"
+            }
+        ],
+        "package": "coreutils-8.32-4+b1",
+        "packageCpe": "None",
+        "packageName": "coreutils",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "8.32-4+b1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2016-2781",
+        "vendorData": [],
+        "vuln": "CVE-2016-2781",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-0215"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0215",
+        "vendorData": [],
+        "vuln": "CVE-2023-0215",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": 4.7,
+                    "exploitabilityScore": 1,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2013-4235"
+            }
+        ],
+        "package": "login-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "login",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2013-4235",
+        "vendorData": [],
+        "vuln": "CVE-2013-4235",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2017-7246"
+            }
+        ],
+        "package": "libpcre3-2:8.39-13",
+        "packageCpe": "None",
+        "packageName": "libpcre3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2:8.39-13",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2017-7246",
+        "vendorData": [],
+        "vuln": "CVE-2017-7246",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-1304"
+            }
+        ],
+        "package": "logsave-1.46.2-2",
+        "packageCpe": "None",
+        "packageName": "logsave",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.46.2-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-1304",
+        "vendorData": [],
+        "vuln": "CVE-2022-1304",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-20861"
+            }
+        ],
+        "package": "spring-core-5.3.20",
+        "packageCpe": "None",
+        "packageName": "spring-core",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/spring-core-5.3.20.jar",
+        "packageType": "java",
+        "packageVersion": "5.3.20",
+        "severity": "Medium",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20861",
+        "vendorData": [],
+        "vuln": "CVE-2023-20861",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.31",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-25857"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-3mc7-4q67-w48m",
+        "vendorData": [],
+        "vuln": "GHSA-3mc7-4q67-w48m",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4.9,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 6.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2007-5686"
+            }
+        ],
+        "package": "login-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "login",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2007-5686",
+        "vendorData": [],
+        "vuln": "CVE-2007-5686",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 10
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-19882"
+            }
+        ],
+        "package": "passwd-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "passwd",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-19882",
+        "vendorData": [],
+        "vuln": "CVE-2019-19882",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-3446"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-3446",
+        "vendorData": [],
+        "vuln": "CVE-2023-3446",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 4.7,
+                    "exploitabilityScore": 1,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-35116"
+            }
+        ],
+        "package": "jackson-databind-2.13.3",
+        "packageCpe": "None",
+        "packageName": "jackson-databind",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/jackson-databind-2.13.3.jar",
+        "packageType": "java",
+        "packageVersion": "2.13.3",
+        "severity": "Medium",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-35116",
+        "vendorData": [],
+        "vuln": "CVE-2023-35116",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-5709"
+            }
+        ],
+        "package": "libkrb5support0-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libkrb5support0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-5709",
+        "vendorData": [],
+        "vuln": "CVE-2018-5709",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-09-01T11:46:16Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [],
+        "package": "passwd-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "passwd",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Unknown",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-4641",
+        "vendorData": [],
+        "vuln": "CVE-2023-4641",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.32",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-38752"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-9w3m-gqgf-c4p9",
+        "vendorData": [],
+        "vuln": "GHSA-9w3m-gqgf-c4p9",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 10,
+                    "exploitabilityScore": 10,
+                    "impactScore": 10
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2005-2541"
+            }
+        ],
+        "package": "tar-1.34+dfsg-1",
+        "packageCpe": "None",
+        "packageName": "tar",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.34+dfsg-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2005-2541",
+        "vendorData": [],
+        "vuln": "CVE-2005-2541",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.9,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4304"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4304",
+        "vendorData": [],
+        "vuln": "CVE-2022-4304",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.31",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-38751"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-98wm-3w3q-mw94",
+        "vendorData": [],
+        "vuln": "GHSA-98wm-3w3q-mw94",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.4,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2023-0286"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0286",
+        "vendorData": [],
+        "vuln": "CVE-2023-0286",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4450"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4450",
+        "vendorData": [],
+        "vuln": "CVE-2022-4450",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-31439"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31439",
+        "vendorData": [],
+        "vuln": "CVE-2023-31439",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "20230227",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-45688"
+            }
+        ],
+        "package": "json-20200518",
+        "packageCpe": "None",
+        "packageName": "json",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/json-20200518.jar",
+        "packageType": "java",
+        "packageVersion": "20200518",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-3vqj-43w4-2q58",
+        "vendorData": [],
+        "vuln": "GHSA-3vqj-43w4-2q58",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-2650"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-2650",
+        "vendorData": [],
+        "vuln": "CVE-2023-2650",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4450"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4450",
+        "vendorData": [],
+        "vuln": "CVE-2022-4450",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-6829"
+            }
+        ],
+        "package": "libgcrypt20-1.8.7-6",
+        "packageCpe": "None",
+        "packageName": "libgcrypt20",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.8.7-6",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-6829",
+        "vendorData": [],
+        "vuln": "CVE-2018-6829",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.18.3-6+deb11u3",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 8.8,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-42898"
+            }
+        ],
+        "package": "libk5crypto3-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libk5crypto3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-42898",
+        "vendorData": [],
+        "vuln": "CVE-2022-42898",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "util-linux-2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "util-linux",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.36.1-8+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-0466"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0466",
+        "vendorData": [],
+        "vuln": "CVE-2023-0466",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4.9,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 6.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2007-5686"
+            }
+        ],
+        "package": "passwd-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "passwd",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2007-5686",
+        "vendorData": [],
+        "vuln": "CVE-2007-5686",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-09-01T11:46:16Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [],
+        "package": "login-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "login",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Unknown",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-4641",
+        "vendorData": [],
+        "vuln": "CVE-2023-4641",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "247.3-7+deb11u2",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-3821"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-3821",
+        "vendorData": [],
+        "vuln": "CVE-2022-3821",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "3.19.6",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-3171"
+            }
+        ],
+        "package": "protobuf-java-3.19.4",
+        "packageCpe": "None",
+        "packageName": "protobuf-java",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/protobuf-java-3.19.4.jar",
+        "packageType": "java",
+        "packageVersion": "3.19.4",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-h4h5-3hr4-j3g2",
+        "vendorData": [],
+        "vuln": "GHSA-h4h5-3hr4-j3g2",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-31438"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31438",
+        "vendorData": [],
+        "vuln": "CVE-2023-31438",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-1304"
+            }
+        ],
+        "package": "libss2-1.46.2-2",
+        "packageCpe": "None",
+        "packageName": "libss2",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.46.2-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-1304",
+        "vendorData": [],
+        "vuln": "CVE-2022-1304",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-31437"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-31437",
+        "vendorData": [],
+        "vuln": "CVE-2023-31437",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2021-36086"
+            }
+        ],
+        "package": "libsepol1-3.1-1",
+        "packageCpe": "None",
+        "packageName": "libsepol1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "3.1-1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2021-36086",
+        "vendorData": [],
+        "vuln": "CVE-2021-36086",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2021-36084"
+            }
+        ],
+        "package": "libsepol1-3.1-1",
+        "packageCpe": "None",
+        "packageName": "libsepol1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "3.1-1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2021-36084",
+        "vendorData": [],
+        "vuln": "CVE-2021-36084",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "6.2+20201114-2+deb11u1",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.1,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2022-29458"
+            }
+        ],
+        "package": "libtinfo6-6.2+20201114-2",
+        "packageCpe": "None",
+        "packageName": "libtinfo6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "6.2+20201114-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-29458",
+        "vendorData": [],
+        "vuln": "CVE-2022-29458",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "3.19.6",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-3510"
+            }
+        ],
+        "package": "protobuf-java-3.19.4",
+        "packageCpe": "None",
+        "packageName": "protobuf-java",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/protobuf-java-3.19.4.jar",
+        "packageType": "java",
+        "packageVersion": "3.19.4",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-4gg5-vx3j-xwc7",
+        "vendorData": [],
+        "vuln": "GHSA-4gg5-vx3j-xwc7",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2013-4392"
+            }
+        ],
+        "package": "libsystemd0-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libsystemd0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2013-4392",
+        "vendorData": [],
+        "vuln": "CVE-2013-4392",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2019-1010025"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010025",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010025",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-3446"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-3446",
+        "vendorData": [],
+        "vuln": "CVE-2023-3446",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "6.2+20201114-2+deb11u1",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.1,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2022-29458"
+            }
+        ],
+        "package": "ncurses-bin-6.2+20201114-2",
+        "packageCpe": "None",
+        "packageName": "ncurses-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "6.2+20201114-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-29458",
+        "vendorData": [],
+        "vuln": "CVE-2022-29458",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "libblkid1-2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libblkid1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.36.1-8+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 9.8,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-1010022"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010022",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010022",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2021-33560"
+            }
+        ],
+        "package": "libgcrypt20-1.8.7-6",
+        "packageCpe": "None",
+        "packageName": "libgcrypt20",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.8.7-6",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2021-33560",
+        "vendorData": [],
+        "vuln": "CVE-2021-33560",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-20863"
+            }
+        ],
+        "package": "spring-core-5.3.20",
+        "packageCpe": "None",
+        "packageName": "spring-core",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/spring-core-5.3.20.jar",
+        "packageType": "java",
+        "packageVersion": "5.3.20",
+        "severity": "Medium",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20863",
+        "vendorData": [],
+        "vuln": "CVE-2023-20863",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "2.13.4.2",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-42003"
+            }
+        ],
+        "package": "jackson-databind-2.13.3",
+        "packageCpe": "None",
+        "packageName": "jackson-databind",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/jackson-databind-2.13.3.jar",
+        "packageType": "java",
+        "packageVersion": "2.13.3",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-jjjh-jjxp-wpff",
+        "vendorData": [],
+        "vuln": "GHSA-jjjh-jjxp-wpff",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 3.7,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-21968"
+            }
+        ],
+        "package": "java-17.0.2+8-86",
+        "packageCpe": "None",
+        "packageName": "java",
+        "packagePath": "/usr/local/openjdk-17/bin/java",
+        "packageType": "binary",
+        "packageVersion": "17.0.2+8-86",
+        "severity": "Low",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-21968",
+        "vendorData": [],
+        "vuln": "CVE-2023-21968",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "2.13.4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-42004"
+            }
+        ],
+        "package": "jackson-databind-2.13.3",
+        "packageCpe": "None",
+        "packageName": "jackson-databind",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/jackson-databind-2.13.3.jar",
+        "packageType": "java",
+        "packageVersion": "2.13.3",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-rgv9-q543-rqg4",
+        "vendorData": [],
+        "vuln": "GHSA-rgv9-q543-rqg4",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2022-2097"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-2097",
+        "vendorData": [],
+        "vuln": "CVE-2022-2097",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "bsdutils-1:2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "bsdutils",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:2.36.1-8+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4,
+                    "exploitabilityScore": 8,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2010-4756"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2010-4756",
+        "vendorData": [],
+        "vuln": "CVE-2010-4756",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "1.12.261",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-31159"
+            }
+        ],
+        "package": "aws-java-sdk-s3-1.12.232",
+        "packageCpe": "None",
+        "packageName": "aws-java-sdk-s3",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/aws-java-sdk-s3-1.12.232.jar",
+        "packageType": "java",
+        "packageVersion": "1.12.232",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-c28r-hw5m-5gv3",
+        "vendorData": [],
+        "vuln": "GHSA-c28r-hw5m-5gv3",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-08T16:24:58Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-36054"
+            }
+        ],
+        "package": "libkrb5support0-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libkrb5support0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-36054",
+        "vendorData": [],
+        "vuln": "CVE-2023-36054",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2017-7245"
+            }
+        ],
+        "package": "libpcre3-2:8.39-13",
+        "packageCpe": "None",
+        "packageName": "libpcre3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2:8.39-13",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2017-7245",
+        "vendorData": [],
+        "vuln": "CVE-2017-7245",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4,
+                    "exploitabilityScore": 8,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2010-4756"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2010-4756",
+        "vendorData": [],
+        "vuln": "CVE-2010-4756",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-3715"
+            }
+        ],
+        "package": "bash-5.1-2+deb11u1",
+        "packageCpe": "None",
+        "packageName": "bash",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "5.1-2+deb11u1",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-3715",
+        "vendorData": [],
+        "vuln": "CVE-2022-3715",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 10
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-19882"
+            }
+        ],
+        "package": "login-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "login",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-19882",
+        "vendorData": [],
+        "vuln": "CVE-2019-19882",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 4.7,
+                    "exploitabilityScore": 1,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2017-18018"
+            }
+        ],
+        "package": "coreutils-8.32-4+b1",
+        "packageCpe": "None",
+        "packageName": "coreutils",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "8.32-4+b1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2017-18018",
+        "vendorData": [],
+        "vuln": "CVE-2017-18018",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-29383"
+            }
+        ],
+        "package": "login-1:4.8.1-1",
+        "packageCpe": "None",
+        "packageName": "login",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1:4.8.1-1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-29383",
+        "vendorData": [],
+        "vuln": "CVE-2023-29383",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "4.1.94.Final",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-34462"
+            }
+        ],
+        "package": "netty-handler-4.1.77.Final",
+        "packageCpe": "None",
+        "packageName": "netty-handler",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/netty-handler-4.1.77.Final.jar",
+        "packageType": "java",
+        "packageVersion": "4.1.77.Final",
+        "severity": "Medium",
+        "url": "https://github.com/advisories/GHSA-6mjq-h674-j845",
+        "vendorData": [],
+        "vuln": "GHSA-6mjq-h674-j845",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2017-16231"
+            }
+        ],
+        "package": "libpcre3-2:8.39-13",
+        "packageCpe": "None",
+        "packageName": "libpcre3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2:8.39-13",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2017-16231",
+        "vendorData": [],
+        "vuln": "CVE-2017-16231",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 8.8,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2019-1010023"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010023",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010023",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4.3,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2019-20838"
+            }
+        ],
+        "package": "libpcre3-2:8.39-13",
+        "packageCpe": "None",
+        "packageName": "libpcre3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2:8.39-13",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-20838",
+        "vendorData": [],
+        "vuln": "CVE-2019-20838",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-31T13:33:02Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-40433"
+            }
+        ],
+        "package": "java-17.0.2+8-86",
+        "packageCpe": "None",
+        "packageName": "java",
+        "packagePath": "/usr/local/openjdk-17/bin/java",
+        "packageType": "binary",
+        "packageVersion": "17.0.2+8-86",
+        "severity": "High",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40433",
+        "vendorData": [],
+        "vuln": "CVE-2022-40433",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4.3,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.7,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2011-3374"
+            }
+        ],
+        "package": "libapt-pkg6.0-2.2.4",
+        "packageCpe": "None",
+        "packageName": "libapt-pkg6.0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.2.4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2011-3374",
+        "vendorData": [],
+        "vuln": "CVE-2011-3374",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.9,
+                    "exploitabilityScore": 5.5,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 6.1,
+                    "exploitabilityScore": 1.6,
+                    "impactScore": 4
+                },
+                "id": "CVE-2020-13529"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2020-13529",
+        "vendorData": [],
+        "vuln": "CVE-2020-13529",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-0464"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0464",
+        "vendorData": [],
+        "vuln": "CVE-2023-0464",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "4.16.0-2+deb11u1",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 9.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 5.2
+                },
+                "id": "CVE-2021-46848"
+            }
+        ],
+        "package": "libtasn1-6-4.16.0-2",
+        "packageCpe": "None",
+        "packageName": "libtasn1-6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "4.16.0-2",
+        "severity": "Critical",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2021-46848",
+        "vendorData": [],
+        "vuln": "CVE-2021-46848",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-08T16:24:58Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 6.5,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-36054"
+            }
+        ],
+        "package": "libk5crypto3-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libk5crypto3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-36054",
+        "vendorData": [],
+        "vuln": "CVE-2023-36054",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u4",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.9,
+                    "exploitabilityScore": 2.2,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4304"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4304",
+        "vendorData": [],
+        "vuln": "CVE-2022-4304",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 1.9,
+                    "exploitabilityScore": 3.4,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-0563"
+            }
+        ],
+        "package": "libmount1-2.36.1-8+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libmount1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.36.1-8+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+        "vendorData": [],
+        "vuln": "CVE-2022-0563",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.18.3-6+deb11u3",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 8.8,
+                    "exploitabilityScore": 2.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-42898"
+            }
+        ],
+        "package": "libgssapi-krb5-2-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libgssapi-krb5-2",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-42898",
+        "vendorData": [],
+        "vuln": "CVE-2022-42898",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2019-9192"
+            }
+        ],
+        "package": "libc-bin-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc-bin",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-9192",
+        "vendorData": [],
+        "vuln": "CVE-2019-9192",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2019-9192"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-9192",
+        "vendorData": [],
+        "vuln": "CVE-2019-9192",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-41409"
+            }
+        ],
+        "package": "libpcre2-8-0-10.36-2+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libpcre2-8-0",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "10.36-2+deb11u1",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-41409",
+        "vendorData": [],
+        "vuln": "CVE-2022-41409",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2023-29491"
+            }
+        ],
+        "package": "ncurses-base-6.2+20201114-2",
+        "packageCpe": "None",
+        "packageName": "ncurses-base",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "6.2+20201114-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-29491",
+        "vendorData": [],
+        "vuln": "CVE-2023-29491",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4,
+                    "exploitabilityScore": 1.9,
+                    "impactScore": 6.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2010-0928"
+            }
+        ],
+        "package": "libssl1.1-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "libssl1.1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2010-0928",
+        "vendorData": [],
+        "vuln": "CVE-2010-0928",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "247.3-7+deb11u2",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.5,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2022-4415"
+            }
+        ],
+        "package": "libudev1-247.3-7+deb11u1",
+        "packageCpe": "None",
+        "packageName": "libudev1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "247.3-7+deb11u1",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-4415",
+        "vendorData": [],
+        "vuln": "CVE-2022-4415",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 4.3,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2011-3389"
+            }
+        ],
+        "package": "libgnutls30-3.7.1-5+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libgnutls30",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "3.7.1-5+deb11u2",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2011-3389",
+        "vendorData": [],
+        "vuln": "CVE-2011-3389",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-08-01T23:26:17Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-3817"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-3817",
+        "vendorData": [],
+        "vuln": "CVE-2023-3817",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 2.1,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 3.3,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2021-36085"
+            }
+        ],
+        "package": "libsepol1-3.1-1",
+        "packageCpe": "None",
+        "packageName": "libsepol1",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "3.1-1",
+        "severity": "Low",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2021-36085",
+        "vendorData": [],
+        "vuln": "CVE-2021-36085",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2018-5709"
+            }
+        ],
+        "package": "libk5crypto3-1.18.3-6+deb11u2",
+        "packageCpe": "None",
+        "packageName": "libk5crypto3",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.18.3-6+deb11u2",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2018-5709",
+        "vendorData": [],
+        "vuln": "CVE-2018-5709",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 4.9
+                },
+                "cvssV3": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "id": "CVE-2007-6755"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2007-6755",
+        "vendorData": [],
+        "vuln": "CVE-2007-6755",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 6.8,
+                    "exploitabilityScore": 8.6,
+                    "impactScore": 6.4
+                },
+                "cvssV3": {
+                    "baseScore": 7.8,
+                    "exploitabilityScore": 1.8,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-1304"
+            }
+        ],
+        "package": "e2fsprogs-1.46.2-2",
+        "packageCpe": "None",
+        "packageName": "e2fsprogs",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.46.2-2",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2022-1304",
+        "vendorData": [],
+        "vuln": "CVE-2022-1304",
+        "willNotFix": true
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2023-0466"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "Medium",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0466",
+        "vendorData": [],
+        "vuln": "CVE-2023-0466",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": 5,
+                    "exploitabilityScore": 10,
+                    "impactScore": 2.9
+                },
+                "cvssV3": {
+                    "baseScore": 5.3,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 1.4
+                },
+                "id": "CVE-2019-1010024"
+            }
+        ],
+        "package": "libc6-2.31-13+deb11u4",
+        "packageCpe": "None",
+        "packageName": "libc6",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "2.31-13+deb11u4",
+        "severity": "Negligible",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2019-1010024",
+        "vendorData": [],
+        "vuln": "CVE-2019-1010024",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "debian:11",
+        "fix": "1.1.1n-0+deb11u5",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-0464"
+            }
+        ],
+        "package": "openssl-1.1.1n-0+deb11u3",
+        "packageCpe": "None",
+        "packageName": "openssl",
+        "packagePath": "pkgdb",
+        "packageType": "dpkg",
+        "packageVersion": "1.1.1n-0+deb11u3",
+        "severity": "High",
+        "url": "https://security-tracker.debian.org/tracker/CVE-2023-0464",
+        "vendorData": [],
+        "vuln": "CVE-2023-0464",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "github:java",
+        "fix": "2.0",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 9.8,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 5.9
+                },
+                "id": "CVE-2022-1471"
+            }
+        ],
+        "package": "snakeyaml-1.30",
+        "packageCpe": "None",
+        "packageName": "snakeyaml",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/snakeyaml-1.30.jar",
+        "packageType": "java",
+        "packageVersion": "1.30",
+        "severity": "High",
+        "url": "https://github.com/advisories/GHSA-mjmj-j48q-9wg2",
+        "vendorData": [],
+        "vuln": "GHSA-mjmj-j48q-9wg2",
+        "willNotFix": false
+    },
+    {
+        "detectedAt": "2023-07-28T12:25:51Z",
+        "feed": "vulnerabilities",
+        "feedGroup": "nvd",
+        "fix": "None",
+        "nvdData": [
+            {
+                "cvssV2": {
+                    "baseScore": -1,
+                    "exploitabilityScore": -1,
+                    "impactScore": -1
+                },
+                "cvssV3": {
+                    "baseScore": 7.5,
+                    "exploitabilityScore": 3.9,
+                    "impactScore": 3.6
+                },
+                "id": "CVE-2023-20860"
+            }
+        ],
+        "package": "spring-core-5.3.20",
+        "packageCpe": "None",
+        "packageName": "spring-core",
+        "packagePath": "/app/xray.jar:BOOT-INF/lib/spring-core-5.3.20.jar",
+        "packageType": "java",
+        "packageVersion": "5.3.20",
+        "severity": "High",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20860",
+        "vendorData": [],
+        "vuln": "CVE-2023-20860",
+        "willNotFix": false
+    }
+]
