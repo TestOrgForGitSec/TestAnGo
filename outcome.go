@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"encoding/json"
 	"strconv"
 	"strings"
@@ -9,7 +8,6 @@ import (
 	"github.com/cloudbees-compliance/chlog-go/log"
 	domain "github.com/cloudbees-compliance/chplugin-go/v0.4.0/domainv0_4_0"
 	scan "github.com/cloudbees-compliance/compliance-hub-plugin-anchore/scan"
-	utilities "github.com/cloudbees-compliance/compliance-hub-plugin-anchore/utilities"
 )
 
 func groupResourcesByVulnerability(vulnList *[]scan.VulnerabilityDetail, requestId string) (map[string][]*domain.DetailRow, map[string][]scan.VulnerabilityDetail) {
@@ -38,8 +36,7 @@ func groupResourcesByVulnerability(vulnList *[]scan.VulnerabilityDetail, request
 	return resourceMap, baseDataMap
 }
 
-func mapToEvaluation(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile, evalMap map[string]*domain.Evaluation) map[string]*domain.Evaluation {
-	reqId := utilities.GetRequestId(ctx)
+func mapToEvaluation(reqId string, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile, evalMap map[string]*domain.Evaluation) map[string]*domain.Evaluation {
 	resourceMap, baseDataMap := groupResourcesByVulnerability(vulnList, reqId)
 	var eval *domain.Evaluation
 	var ok bool

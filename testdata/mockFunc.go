@@ -7,6 +7,8 @@ import (
 	"github.com/cloudbees-compliance/chlog-go/log"
 )
 
+const ErrorResponse = "Error occured"
+
 var GetImageMock func(requestId string, imageName string) ([]byte, error)
 var GetRegistriesMock func(requestId string) ([]byte, error)
 var GetSystemStatusMock func(requestId string) ([]byte, error)
@@ -37,18 +39,13 @@ func MockGetImage(jsonpath string) {
 			log.Error().Err(err).Msg("Error reading test data")
 		}
 		return file, nil
-
 	}
-
 }
 
-func MockGetImageError(jsonpath string) {
+func MockGetImageError() {
 	GetImageMock = func(requestId string, imageName string) ([]byte, error) {
-
-		return nil, errors.New("error when getting image")
-
+		return []byte(ErrorResponse), errors.New("error when getting image")
 	}
-
 }
 
 func MockGetRegistries(jsonpath string) {
@@ -58,9 +55,19 @@ func MockGetRegistries(jsonpath string) {
 			log.Error().Err(err).Msg("Error reading test data")
 		}
 		return file, nil
-
 	}
+}
 
+func MockGetRegistriesError() {
+	GetRegistriesMock = func(requestId string) ([]byte, error) {
+		return []byte(ErrorResponse), errors.New("error when getting registries")
+	}
+}
+
+func MockGetRegistriesJsonError() {
+	GetRegistriesMock = func(requestId string) ([]byte, error) {
+		return []byte(ErrorResponse), nil
+	}
 }
 
 func MockGetVulnerabilities(jsonPath string) {
@@ -70,7 +77,24 @@ func MockGetVulnerabilities(jsonPath string) {
 			log.Error().Err(err).Msg("Error reading test data")
 		}
 		return file, nil
+	}
+}
 
+func MockGetEmptyVulnerabilities() {
+	GetVulnerabilitiesMock = func(requestId string, imageName string) ([]byte, error) {
+		return []byte("[]"), nil
+	}
+}
+
+func MockGetVulnerabilitiesError() {
+	GetVulnerabilitiesMock = func(requestId string, imageName string) ([]byte, error) {
+		return []byte(ErrorResponse), errors.New("error when getting vulnerabilities")
+	}
+}
+
+func MockGetVulnerabilitiesJsonError() {
+	GetVulnerabilitiesMock = func(requestId string, imageName string) ([]byte, error) {
+		return []byte(ErrorResponse), nil
 	}
 }
 
@@ -82,5 +106,11 @@ func MockGetSystemStatus(jsonPath string) {
 		}
 		return file, nil
 
+	}
+}
+
+func MockGetSystemStatusError() {
+	GetSystemStatusMock = func(requestId string) ([]byte, error) {
+		return []byte(ErrorResponse), errors.New("error when getting system status")
 	}
 }

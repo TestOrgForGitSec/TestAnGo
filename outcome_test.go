@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"encoding/json"
 	"os"
 	"testing"
@@ -21,7 +20,7 @@ func TestMapToEvaluation(t *testing.T) {
 	assetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
 	assetProfiles = append(assetProfiles, assetProfile)
 	asset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "subtype", Identifier: "localhost"}, Profiles: assetProfiles}
-	evaluationMap := mapToEvaluation(context.Background(), &vulnerabilityList, asset, assetProfile, map[string]*domain.Evaluation{})
+	evaluationMap := mapToEvaluation("123", &vulnerabilityList, asset, assetProfile, map[string]*domain.Evaluation{})
 	assert.Equal(t, 93, len(evaluationMap))
 	assert.NotEmpty(t, evaluationMap)
 	log.Debug().Msg("Inside TestMapToEvaluation - Exit")

@@ -33,7 +33,7 @@ func GetImage(requestId string, imageName string) ([]byte, error) {
 	if err != nil {
 		// only output stdout/err if there was a problem
 		if out != nil {
-			log.Error(requestId).Msg("stdout/err:" + string(out))
+			log.Error(requestId).Msg(StdErr + string(out))
 		}
 		return nil, err
 	}
@@ -57,31 +57,35 @@ func GetScanStatus(requestId string, imageName string, retryCount int) (*GetAnal
 		return &analysisStatus, true, nil
 	} else if strings.Compare("active", analysisStatus.ImageStatus) == 0 &&
 		strings.Compare("analyzed", analysisStatus.AnalysisStatus) != 0 {
-		var attempts = retryCount
-		sleep := time.Second * SleepDuration
-		log.Debug(requestId).Msgf("Starting Retry for %d times ...", attempts)
-		for i := 0; i < attempts; i++ {
-			status, err = GetImage(requestId, imageName)
-			if err != nil {
-				return nil, false, err
-			}
-			jsonerr := json.Unmarshal(status, &analysisStatus)
-			if jsonerr != nil {
-				log.Error().Msgf("AnchorePlugin: Error when marshaling response %s - %s", analysisStatus.AnalysisStatus, analysisStatus.ImageStatus)
-				return nil, false, jsonerr
-			}
-			if strings.Compare("active", analysisStatus.ImageStatus) == 0 &&
-				strings.Compare("analyzed", analysisStatus.AnalysisStatus) != 0 {
-				log.Debug(requestId).Msgf("status of analysis for attempt %d is - %s", i+1, analysisStatus.AnalysisStatus)
-				log.Debug(requestId).Msgf("sleeping for : %s ", sleep.String())
-				time.Sleep(sleep)
-				continue
-			}
-			break
-		}
-
+		return getRetryStatus(retryCount, requestId, imageName)
 	} else {
 		return nil, false, nil
+	}
+}
+
+func getRetryStatus(retryCount int, requestId string, imageName string) (*GetAnalysisStatus, bool, error) {
+	var analysisStatus GetAnalysisStatus
+	var attempts = retryCount
+	sleep := time.Second * SleepDuration
+	log.Debug(requestId).Msgf("Starting Retry for %d times ...", attempts)
+	for i := 0; i < attempts; i++ {
+		status, err := GetImage(requestId, imageName)
+		if err != nil {
+			return nil, false, err
+		}
+		jsonerr := json.Unmarshal(status, &analysisStatus)
+		if jsonerr != nil {
+			log.Error().Msgf("AnchorePlugin: Error when marshaling response %s - %s", analysisStatus.AnalysisStatus, analysisStatus.ImageStatus)
+			return nil, false, jsonerr
+		}
+		if strings.Compare("active", analysisStatus.ImageStatus) == 0 &&
+			strings.Compare("analyzed", analysisStatus.AnalysisStatus) != 0 {
+			log.Debug(requestId).Msgf("status of analysis for attempt %d is - %s", i+1, analysisStatus.AnalysisStatus)
+			log.Debug(requestId).Msgf("sleeping for : %s ", sleep.String())
+			time.Sleep(sleep)
+			continue
+		}
+		break
 	}
 	return &analysisStatus, true, nil
 }
@@ -93,7 +97,7 @@ func GetVulnerabilities(requestId string, imageName string) ([]VulnerabilityDeta
 	if err != nil {
 		// only output stdout/err if there was a problem
 		if vulnerabilities != nil {
-			log.Error(requestId).Msg("stdout/err:" + string(vulnerabilities))
+			log.Error(requestId).Msg(StdErr + string(vulnerabilities))
 		}
 		return nil, err
 	}
@@ -115,7 +119,7 @@ func GetRegistries(requestId string) (*[]Registry, error) {
 	if err != nil {
 		// only output stdout/err if there was a problem
 		if registries != nil {
-			log.Error(requestId).Msg("stdout/err:" + string(registries))
+			log.Error(requestId).Msg(StdErr + string(registries))
 		}
 		return nil, err
 	}
@@ -136,7 +140,7 @@ func GetSystemStatus(requestId string) error {
 	sysStatus, err := IAnchore.GetSystemStatus(requestId)
 	if err != nil {
 		if sysStatus != nil {
-			log.Error(requestId).Err(err).Msg("stdout/err:" + string(sysStatus))
+			log.Error(requestId).Err(err).Msg(StdErr + string(sysStatus))
 		}
 		return err
 	}

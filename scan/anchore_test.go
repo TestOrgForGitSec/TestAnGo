@@ -23,8 +23,7 @@ func TestGetImage(t *testing.T) {
 
 func TestGetImageErr(t *testing.T) {
 	log.Debug().Msg("Inside TestGetImageErr - Enter")
-	path, _ := filepath.Abs("../testdata/getimage.json")
-	testdata.MockGetImageError(path)
+	testdata.MockGetImageError()
 	mockVar := testdata.HttpMock1{}
 	IAnchore = mockVar
 	data, err := GetImage("1234", "alpine")
@@ -45,6 +44,28 @@ func TestGetRegistries(t *testing.T) {
 	log.Debug().Msg("TestGetRegistries - Exit")
 }
 
+func TestGetRegistriesErr(t *testing.T) {
+	log.Debug().Msg("Inside TestGetRegistriesErr - Enter")
+	testdata.MockGetRegistriesError()
+	mockVar := testdata.HttpMock1{}
+	IAnchore = mockVar
+	registryList, err := GetRegistries("1234")
+	assert.NotNil(t, err)
+	assert.Nil(t, registryList)
+	log.Debug().Msg("TestGetRegistriesErr - Exit")
+}
+
+func TestGetRegistriesJsonErr(t *testing.T) {
+	log.Debug().Msg("Inside TestGetRegistriesJsonErr - Enter")
+	testdata.MockGetRegistriesJsonError()
+	mockVar := testdata.HttpMock1{}
+	IAnchore = mockVar
+	registryList, err := GetRegistries("1234")
+	assert.NotNil(t, err)
+	assert.Nil(t, registryList)
+	log.Debug().Msg("TestGetRegistriesJsonErr - Exit")
+}
+
 func TestGetVulnerabilities(t *testing.T) {
 	log.Debug().Msg("Inside TestGetVulnerabilities - Enter")
 	path, _ := filepath.Abs("../testdata/getVulnerabilities.json")
@@ -56,6 +77,30 @@ func TestGetVulnerabilities(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotNil(t, data)
 	log.Debug().Msg(" TestGetVulnerabilities - Exit")
+}
+
+func TestGetVulnerabilitiesErr(t *testing.T) {
+	log.Debug().Msg("Inside TestGetVulnerabilitiesErr - Enter")
+	testdata.MockGetVulnerabilitiesError()
+	mockVar := testdata.HttpMock1{}
+	IAnchore = mockVar
+
+	data, err := GetVulnerabilities("1234", "alpine")
+	assert.Nil(t, data)
+	assert.NotNil(t, err)
+	log.Debug().Msg(" TestGetVulnerabilitiesErr - Exit")
+}
+
+func TestGetVulnerabilitiesJsonErr(t *testing.T) {
+	log.Debug().Msg("Inside TestGetVulnerabilitiesJsonErr - Enter")
+	testdata.MockGetVulnerabilitiesJsonError()
+	mockVar := testdata.HttpMock1{}
+	IAnchore = mockVar
+
+	data, err := GetVulnerabilities("1234", "alpine")
+	assert.Nil(t, data)
+	assert.NotNil(t, err)
+	log.Debug().Msg(" TestGetVulnerabilitiesJsonErr - Exit")
 }
 
 func TestGetScanStatus(t *testing.T) {
@@ -72,7 +117,7 @@ func TestGetScanStatus(t *testing.T) {
 
 func TestGetScanStatusErr(t *testing.T) {
 	log.Debug().Msg("Inside TestGetScanStatusErr - Enter")
-	path, _ := filepath.Abs("../testdata/getimagena.json")
+	path, _ := filepath.Abs("../testdata/getanalyzingimage.json")
 	testdata.MockGetImage(path)
 
 	mockVar := testdata.HttpMock1{}
@@ -86,9 +131,7 @@ func TestGetScanStatusErr(t *testing.T) {
 
 func TestGetScanStatusResErr(t *testing.T) {
 	log.Debug().Msg("Inside TestGetScanStatusResErr - Enter")
-	path, _ := filepath.Abs("../testdata/getimagena.json")
-	testdata.MockGetImageError(path)
-
+	testdata.MockGetImageError()
 	mockVar := testdata.HttpMock1{}
 	IAnchore = mockVar
 	status, _, err := GetScanStatus("123", "test", 1)
@@ -113,14 +156,41 @@ func TestGetScanStatusJsonErr(t *testing.T) {
 
 }
 
-func TestGetScanStatusOtherStatus(t *testing.T) {
-	log.Debug().Msg("Inside TestGetScanStatusOtherStatus - Enter")
-	path, _ := filepath.Abs("../testdata/getimageother.json")
+func TestGetScanStatusInactiveErr(t *testing.T) {
+	log.Debug().Msg("Inside TestGetScanStatusInactiveErr - Enter")
+	path, _ := filepath.Abs("../testdata/getinactiveimage.json")
+	testdata.MockGetImage(path)
+
+	mockVar := testdata.HttpMock1{}
+	IAnchore = mockVar
+	status, isAnalysed, err := GetScanStatus("123", "test", 1)
+	assert.Nil(t, err)
+	assert.Nil(t, status)
+	assert.Equal(t, false, isAnalysed)
+
+	log.Debug().Msg("Inside TestGetScanStatusInactiveErr - Exit")
+
+}
+
+func TestGetSystemStatus(t *testing.T) {
+	log.Debug().Msg("Inside TestGetSystemStatus - Enter")
+	path, _ := filepath.Abs("../testdata/getsystemstatus.json")
 	testdata.MockGetSystemStatus(path)
 
 	mockVar := testdata.HttpMock1{}
 	IAnchore = mockVar
 	err := GetSystemStatus("123")
 	assert.Nil(t, err)
-	log.Debug().Msg("Inside TestGetScanStatusOtherStatus - Exit")
+	log.Debug().Msg("Inside TestGetSystemStatus - Exit")
+}
+
+func TestGetSystemStatusErr(t *testing.T) {
+	log.Debug().Msg("Inside TestGetSystemStatusErr - Enter")
+	testdata.MockGetSystemStatusError()
+
+	mockVar := testdata.HttpMock1{}
+	IAnchore = mockVar
+	err := GetSystemStatus("123")
+	assert.NotNil(t, err)
+	log.Debug().Msg("Inside TestGetSystemStatusErr - Exit")
 }

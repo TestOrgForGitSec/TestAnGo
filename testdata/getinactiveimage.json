@@ -59,7 +59,7 @@
       }
     ],
     "imageDigest": "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
-    "imageStatus": "something",
+    "imageStatus": "inactive",
     "lastUpdated": "2023-08-25T07:23:08Z",
     "parentDigest": "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501",
     "userId": "cbc-sbom-eval"
