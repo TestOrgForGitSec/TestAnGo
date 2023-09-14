@@ -21,45 +21,46 @@ type PluginFetcher struct {
 }
 
 func (f *PluginFetcher) FetchAssets(req plugin.AssetFetchRequest) ([]*domain.Asset, error) {
+	//Aws Ecr Asset
 	var assets []*domain.Asset
-	var assetProfiles []*domain.AssetProfile
-	binaryAttribute := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
-	assetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
+	var ecrAssetProfiles []*domain.AssetProfile
+	ecrBinaryAttribute := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
+	ecrAssetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
 
-	assetProfile.BinAttributes = append(assetProfile.BinAttributes, binaryAttribute)
-	assetProfiles = append(assetProfiles, assetProfile)
-	asset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "aws_ecr_repo", Identifier: "aws_ecr_repoarn:aws:ecr:us-east-1:1234567:repository/test/plugin-test"}, Profiles: assetProfiles}
-	assets = append(assets, asset)
+	ecrAssetProfile.BinAttributes = append(ecrAssetProfile.BinAttributes, ecrBinaryAttribute)
+	ecrAssetProfiles = append(ecrAssetProfiles, ecrAssetProfile)
+	ecrAsset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "aws_ecr_repo", Identifier: "arn:aws:ecr:us-east-1:1234567:repository/test/plugin-test"}, Profiles: ecrAssetProfiles}
+	assets = append(assets, ecrAsset)
 
-	//asset 2
-	var assetProfiles2 []*domain.AssetProfile
-	binaryAttribute2 := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
-	assetProfile2 := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
+	//Docker asset
+	var dockerAssetProfiles []*domain.AssetProfile
+	dockerBinaryAttribute := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
+	dockerAssetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
 
-	assetProfile2.BinAttributes = append(assetProfile2.BinAttributes, binaryAttribute2)
-	assetProfiles2 = append(assetProfiles2, assetProfile2)
-	asset2 := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "dockerhub_repo", Identifier: "library/test"}, Profiles: assetProfiles2}
-	assets = append(assets, asset2)
+	dockerAssetProfile.BinAttributes = append(dockerAssetProfile.BinAttributes, dockerBinaryAttribute)
+	dockerAssetProfiles = append(dockerAssetProfiles, dockerAssetProfile)
+	dockerAsset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "dockerhub_repo", Identifier: "library/test"}, Profiles: dockerAssetProfiles}
+	assets = append(assets, dockerAsset)
 
-	//asset 3
-	var assetProfiles3 []*domain.AssetProfile
-	binaryAttribute3 := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
-	assetProfile3 := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
+	//Jfrog asset
+	var jfrogAssetProfiles []*domain.AssetProfile
+	jfrogBinaryAttribute := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
+	jfrogAssetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
 
-	assetProfile3.BinAttributes = append(assetProfile3.BinAttributes, binaryAttribute3)
-	assetProfiles3 = append(assetProfiles3, assetProfile3)
-	asset3 := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "artifactory_repo", Identifier: "https://jfrog.test.com/artifactory/test/plugin"}, Profiles: assetProfiles3}
-	assets = append(assets, asset3)
+	jfrogAssetProfile.BinAttributes = append(jfrogAssetProfile.BinAttributes, jfrogBinaryAttribute)
+	jfrogAssetProfiles = append(jfrogAssetProfiles, jfrogAssetProfile)
+	jfrogAsset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "artifactory_repo", Identifier: "https://jfrog.test.com/artifactory/test/plugin"}, Profiles: jfrogAssetProfiles}
+	assets = append(assets, jfrogAsset)
 
-	//asset 4
-	var assetProfiles4 []*domain.AssetProfile
-	binaryAttribute4 := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
-	assetProfile4 := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
+	//Nexus asset
+	var nexusAssetProfiles []*domain.AssetProfile
+	nexusBinaryAttribute := &domain.BinaryAttribute{Name: "imageName", Type: "PRIMARY", Version: "1.0", SourceType: domain.SourceType_STREAM, Data: []byte("{sampledata}")}
+	nexusAssetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
 
-	assetProfile4.BinAttributes = append(assetProfile4.BinAttributes, binaryAttribute4)
-	assetProfiles4 = append(assetProfiles4, assetProfile4)
-	asset4 := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "nexus_repo_binary", Identifier: "https://nexus.com/#browse/browse:docker-hosted-repo:v2/test"}, Profiles: assetProfiles4}
-	assets = append(assets, asset4)
+	nexusAssetProfile.BinAttributes = append(nexusAssetProfile.BinAttributes, nexusBinaryAttribute)
+	nexusAssetProfiles = append(nexusAssetProfiles, nexusAssetProfile)
+	nexusAsset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "nexus_repo_binary", Identifier: "https://nexus.com/#browse/browse:docker-hosted-repo:v2/test"}, Profiles: nexusAssetProfiles}
+	assets = append(assets, nexusAsset)
 
 	return assets, nil
 }
@@ -130,7 +131,7 @@ func TestBuildEvaluations(t *testing.T) {
 	assetProfile := &domain.AssetProfile{Uuid: "testProfileuuid", Identifier: "v1.0.1", Type: "BINARY", AttributesUuid: "testattriuuid"}
 	asset := &domain.Asset{Uuid: "1", MasterAsset: &domain.MasterAsset{Type: "BINARY", SubType: "subtype", Identifier: "localhost"}}
 
-	evaluationList, err := buildEvaluations(context.Background(), &vulnerabilityList, asset, assetProfile)
+	evaluationList, err := buildEvaluations("123", &vulnerabilityList, asset, assetProfile)
 	assert.Nil(t, err)
 	assert.NotNil(t, evaluationList)
 	log.Debug().Msg("TestBuildEvaluations - Exit")
@@ -144,13 +145,13 @@ func TestGetNetListener(t *testing.T) {
 	log.Debug().Msg("TestGetNetListener - Exit")
 }
 
-func TestExecuteAnalysersuccessecrrepo(t *testing.T) {
-	log.Debug().Msg("TestExecuteAnalysersuccess - Enter")
+func TestExecuteAnalyserSuccess(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserSuccess - Enter")
 	anchore := NewAnchoreScanner()
 	req := mockEcrExecuteRequest()
 	fetcher := &PluginFetcher{}
 
-	testdata.MockGetSystemStatus("testdata/getimage.json")
+	testdata.MockGetSystemStatus("testdata/getsystemstatus.json")
 	testdata.MockGetRegistries("testdata/getregistries.json")
 	testdata.MockGetImage("testdata/getimage.json")
 	testdata.MockGetVulnerabilities("testdata/getVulnerabilities.json")
@@ -160,6 +161,116 @@ func TestExecuteAnalysersuccessecrrepo(t *testing.T) {
 	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
 	assert.Nil(t, err)
 	assert.NotNil(t, res)
-	log.Debug().Msg("TestExecuteAnalysersuccess - Exit")
+	log.Debug().Msg("TestExecuteAnalyserSuccess - Exit")
+}
 
+func TestExecuteAnalyserCredErr(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserCredErr - Enter")
+	anchore := NewAnchoreScanner()
+	req := mockEcrExecuteRequest()
+	fetcher := &PluginFetcher{}
+
+	testdata.MockGetSystemStatusError()
+	mockVar := testdata.HttpMock1{}
+
+	scan.IAnchore = mockVar
+	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
+	assert.Nil(t, res)
+	assert.NotNil(t, err)
+	log.Debug().Msg("TestExecuteAnalyserCredErr - Exit")
+}
+
+func TestExecuteAnalyserGetStatusErr(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserGetStatusErr - Enter")
+	anchore := NewAnchoreScanner()
+	req := mockEcrExecuteRequest()
+	fetcher := &PluginFetcher{}
+
+	testdata.MockGetSystemStatus("testdata/getsystemstatus.json")
+	testdata.MockGetImageError()
+	testdata.MockGetRegistriesError()
+
+	mockVar := testdata.HttpMock1{}
+
+	scan.IAnchore = mockVar
+	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
+	assert.Nil(t, res)
+	assert.NotNil(t, err)
+	log.Debug().Msg("TestExecuteAnalyserGetStatusErr - Exit")
+}
+
+func TestExecuteAnalyserGetVulnErr(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserGetVulnErr - Enter")
+	anchore := NewAnchoreScanner()
+	req := mockEcrExecuteRequest()
+	fetcher := &PluginFetcher{}
+
+	testdata.MockGetSystemStatus("testdata/getsystemstatus.json")
+	testdata.MockGetRegistries("testdata/getregistries.json")
+	testdata.MockGetImage("testdata/getimage.json")
+	testdata.MockGetVulnerabilitiesError()
+	mockVar := testdata.HttpMock1{}
+
+	scan.IAnchore = mockVar
+	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
+	assert.Nil(t, res)
+	assert.NotNil(t, err)
+	log.Debug().Msg("TestExecuteAnalyserGetVulnErr - Exit")
+}
+
+func TestExecuteAnalyserEmptyVuln(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserEmptyVuln - Enter")
+	anchore := NewAnchoreScanner()
+	req := mockEcrExecuteRequest()
+	fetcher := &PluginFetcher{}
+
+	testdata.MockGetSystemStatus("testdata/getsystemstatus.json")
+	testdata.MockGetRegistries("testdata/getregistries.json")
+	testdata.MockGetImage("testdata/getimage.json")
+	testdata.MockGetEmptyVulnerabilities()
+	mockVar := testdata.HttpMock1{}
+
+	scan.IAnchore = mockVar
+	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
+	assert.Nil(t, err)
+	assert.Equal(t, 0, len(res.Checks))
+	log.Debug().Msg("TestExecuteAnalyserEmptyVuln - Exit")
+}
+
+func TestExecuteAnalyserInactiveImage(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserInactiveImage - Enter")
+	anchore := NewAnchoreScanner()
+	req := mockEcrExecuteRequest()
+	fetcher := &PluginFetcher{}
+
+	testdata.MockGetSystemStatus("testdata/getsystemstatus.json")
+	testdata.MockGetRegistries("testdata/getregistries.json")
+	testdata.MockGetImage("testdata/getinactiveimage.json")
+	testdata.MockGetVulnerabilities("testdata/getVulnerabilities.json")
+	mockVar := testdata.HttpMock1{}
+
+	scan.IAnchore = mockVar
+	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
+	assert.Nil(t, res)
+	assert.NotNil(t, err)
+	log.Debug().Msg("TestExecuteAnalyserInactiveImage - Exit")
+}
+
+func TestExecuteAnalyserGetRegistryErr(t *testing.T) {
+	log.Debug().Msg("TestExecuteAnalyserGetRegistryErr - Enter")
+	anchore := NewAnchoreScanner()
+	req := mockEcrExecuteRequest()
+	fetcher := &PluginFetcher{}
+
+	testdata.MockGetSystemStatus("testdata/getsystemstatus.json")
+	testdata.MockGetRegistriesError()
+	testdata.MockGetImage("testdata/getimage.json")
+	testdata.MockGetVulnerabilities("testdata/getVulnerabilities.json")
+	mockVar := testdata.HttpMock1{}
+
+	scan.IAnchore = mockVar
+	res, err := anchore.ExecuteAnalyser(context.Background(), req, fetcher, nil)
+	assert.Nil(t, err)
+	assert.NotNil(t, res)
+	log.Debug().Msg("TestExecuteAnalyserGetRegistryErr - Exit")
 }

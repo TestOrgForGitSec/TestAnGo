@@ -1,0 +1,38 @@
+{
+  "serviceStates": [
+      {
+          "baseUrl": "http://anchore-test-engine-simplequeue:8083",
+          "hostid": "anchore-test-engine-simplequeue-12d6c9bfd-6tgmq",
+          "serviceDetail": {
+              "available": true,
+              "busy": false,
+              "dbVersion": "22",
+              "detail": {},
+              "message": "all good",
+              "up": true,
+              "version": "4.6.0"
+          },
+          "servicename": "simplequeue",
+          "status": true,
+          "statusMessage": "available",
+          "version": "v1"
+      },
+      {
+          "baseUrl": "http://localhost:8089",
+          "hostid": "anchore-test-engine-api-123776f548-52wqx",
+          "serviceDetail": {
+              "available": true,
+              "busy": false,
+              "dbVersion": "22",
+              "detail": {},
+              "message": "all good",
+              "up": true,
+              "version": "4.6.0"
+          },
+          "servicename": "rbac_authorizer",
+          "status": true,
+          "statusMessage": "available",
+          "version": "v1"
+      }
+  ]
+}

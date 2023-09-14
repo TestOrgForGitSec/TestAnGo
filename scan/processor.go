@@ -15,7 +15,7 @@ func (a AnchoreWrapper) GetImage(requestId string, imageName string) ([]byte, er
 	cmd := exec.Command(app, "image", "get", imageName, "-o", "json")
 	cmdString := cmd.String()
 
-	log.Debug(requestId).Msgf("Running command: %s", cmdString)
+	log.Debug(requestId).Msgf(RunningCommand, cmdString)
 
 	return cmd.CombinedOutput()
 }
@@ -27,7 +27,7 @@ func (a AnchoreWrapper) GetVulnerabilities(requestId string, imageName string) (
 	cmd := exec.Command(app, "image", "vulnerabilities", imageName, "-t", "all", "-o", "json")
 	cmdString := cmd.String()
 
-	log.Debug(requestId).Msgf("Running command: %s", cmdString)
+	log.Debug(requestId).Msgf(RunningCommand, cmdString)
 
 	return cmd.CombinedOutput()
 
@@ -40,7 +40,7 @@ func (a AnchoreWrapper) GetRegistries(requestId string) ([]byte, error) {
 	cmd := exec.Command(app, "registry", "list", "-o", "json")
 	cmdString := cmd.String()
 
-	log.Debug(requestId).Msgf("Running command: %s", cmdString)
+	log.Debug(requestId).Msgf(RunningCommand, cmdString)
 
 	return cmd.CombinedOutput()
 
@@ -53,7 +53,7 @@ func (a AnchoreWrapper) GetSystemStatus(requestId string) ([]byte, error) {
 	cmd := exec.Command(app, "system", "status")
 	cmdString := cmd.String()
 
-	log.Debug(requestId).Msgf("Running command: %s", cmdString)
+	log.Debug(requestId).Msgf(RunningCommand, cmdString)
 
 	return cmd.CombinedOutput()
 }

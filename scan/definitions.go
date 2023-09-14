@@ -16,6 +16,8 @@ const DockerRepo = "dockerhub_repo"
 const JfrogRepo = "artifactory_repo"
 const NexusRepo = "nexus_repo_binary"
 const AwsEcrRepo = "aws_ecr_repo"
+const RunningCommand = "Running command: %s"
+const StdErr = "stdout/err: "
 
 type GetAnalysisStatus struct {
 	AnalysisStatus string `json:"analysisStatus,omitempty"`

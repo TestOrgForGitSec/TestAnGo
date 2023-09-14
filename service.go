@@ -82,40 +82,15 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 		}
 		log.Debug(requestId).Msgf("Anchore Auth Validate Success")
 		for _, asset := range receivedAssets {
-			assetIdentifier := asset.MasterAsset.Identifier
 			for _, profile := range asset.Profiles {
 				log.Debug(requestId).Msgf("Binary Attributes Count : %v", len(profile.BinAttributes))
 				tagName := profile.Identifier
-				var imageName string
-				var isAnalysed bool
-				imageName, isAnalysed, err = getAnalysisStatus(asset, imageName, assetIdentifier, tagName, isAnalysed, err, requestId)
+				checks, err = processAssets(requestId, tagName, asset, profile)
 				if err != nil {
 					return nil, err
 				}
-				if isAnalysed {
-					vulnerabilityList, err := scan.GetVulnerabilities(requestId, imageName)
-					if err != nil {
-						return nil, err
-					}
-					if len(vulnerabilityList) > 0 {
-						log.Debug(requestId).Msgf("Vulnerabilities got %d", len(vulnerabilityList))
-						checks, err = buildEvaluations(ctx, &vulnerabilityList, asset, profile)
-						if err != nil {
-							log.Error(requestId).Err(err).Msgf("Error occurred while building evaluations %s", asset.MasterAsset.Identifier)
-							return nil, err
-						}
-						log.Info(requestId).Msgf("Total number of evaluations returned %d", len(checks))
-
-					} else {
-						log.Debug(requestId).Msgf("No Vulnerabilities")
-					}
-				} else {
-					log.Error(requestId).Msgf("Could not get vulnerabilities %s", assetIdentifier)
-					return nil, errors.New("could not get vulnerabilities")
-				}
 			}
 		}
-
 	}
 
 	return &service.ExecuteAnalyserResponse{
@@ -123,7 +98,42 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 	}, nil
 }
 
-func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier string, tagName string, isAnalysed bool, err error, requestId string) (string, bool, error) {
+func processAssets(requestId, tagName string, asset *domain.Asset, profile *domain.AssetProfile) ([]*domain.Evaluation, error) {
+	var checks []*domain.Evaluation
+	assetIdentifier := asset.MasterAsset.Identifier
+	var imageName string
+	imageName, isAnalysed, err := getAnalysisStatus(asset, assetIdentifier, tagName, requestId)
+	if err != nil {
+		return nil, err
+	}
+	if isAnalysed {
+		vulnerabilityList, err := scan.GetVulnerabilities(requestId, imageName)
+		if err != nil {
+			return nil, err
+		}
+		if len(vulnerabilityList) > 0 {
+			log.Debug(requestId).Msgf("Vulnerabilities got %d", len(vulnerabilityList))
+			checks, err = buildEvaluations(requestId, &vulnerabilityList, asset, profile)
+			if err != nil {
+				log.Error(requestId).Err(err).Msgf("Error occurred while building evaluations %s", asset.MasterAsset.Identifier)
+				return nil, err
+			}
+			log.Info(requestId).Msgf("Total number of evaluations returned %d", len(checks))
+
+		} else {
+			log.Debug(requestId).Msgf("No Vulnerabilities")
+		}
+	} else {
+		log.Error(requestId).Msgf("Could not get vulnerabilities %s", assetIdentifier)
+		return nil, errors.New("could not get vulnerabilities")
+	}
+	return checks, nil
+}
+
+func getAnalysisStatus(asset *domain.Asset, assetIdentifier string, tagName string, requestId string) (string, bool, error) {
+	var imageName string
+	var isAnalysed bool
+	var err error
 	if strings.Compare(scan.DockerRepo, asset.MasterAsset.SubType) == 0 {
 		assetIdentifier = strings.Replace(assetIdentifier, "library/", scan.EmptyString, -1)
 		imageName = assetIdentifier + ":" + tagName
@@ -135,70 +145,80 @@ func getAnalysisStatus(asset *domain.Asset, imageName string, assetIdentifier st
 		assetName := imageNameStr[strings.Index(imageNameStr, "/artifactory")+len("/artifactory"):]
 		imageName = hostName + assetName + ":" + tagName
 		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
-
 	} else if strings.Compare(scan.NexusRepo, asset.MasterAsset.SubType) == 0 {
-		var hostNameList []string
-		assetIdArr := strings.SplitAfter(assetIdentifier, "://")
-		imageNameStr := assetIdArr[1]
-		hostName := imageNameStr[0:strings.Index(imageNameStr, "/")]
-		assetName := imageNameStr[strings.Index(imageNameStr, ":v2")+len(":v2"):]
-		registryList, err := scan.GetRegistries(requestId)
-		if err != nil {
-			log.Debug(requestId).Msgf("Could not get registry ... using default values")
-			for _, portNumber := range NexusPorts {
-				hostNameList = append(hostNameList, hostName+portNumber)
-			}
-		} else {
-			for _, registry := range *registryList {
-				if strings.HasPrefix(registry.Registry, hostName) {
-					hostNameList = append(hostNameList, registry.Registry)
-				}
-			}
-		}
-		if len(hostNameList) == 0 {
-			log.Error(requestId).Msgf("No Nexus registry found for asset %s", assetIdentifier)
-			return "", false, errors.New("no nexus registry found in anchore dashboard")
-		}
-		for _, hostNameValue := range hostNameList {
-			imageName = hostNameValue + assetName + ":" + tagName
-			_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
-			if err == nil {
-				break
-			}
-			log.Debug(requestId).Msgf("Checking Nexus image status for next registry")
-		}
-		if err != nil {
-			log.Error(requestId).Msgf("Could not get analysis status for Nexus asset %s", assetIdentifier)
-			return "", false, err
-		}
+		return getNexusAssetAnalysisStatus(assetIdentifier, requestId, tagName)
 	} else if strings.Compare(scan.AwsEcrRepo, asset.MasterAsset.SubType) == 0 {
-		splitedAssetIdentifer := strings.Split(assetIdentifier, ":")
-		assetName := strings.Replace(splitedAssetIdentifer[5], "repository", scan.EmptyString, -1)
-		registryList, err := scan.GetRegistries(requestId)
-		registryName := scan.EmptyString
-		if err != nil {
-			log.Debug(requestId).Msgf("Could not get registry ... using default format")
-			registryName = splitedAssetIdentifer[4] + ".dkr." + splitedAssetIdentifer[2] + "." + splitedAssetIdentifer[3] + ".amazonaws.com"
-		} else {
-			for _, registryData := range *registryList {
-				if strings.EqualFold(registryData.RegistryType, "awsecr") && strings.HasPrefix(registryData.Registry, splitedAssetIdentifer[4]) {
-					registryName = registryData.Registry
-					break
-				}
-			}
-			if len(registryName) == 0 {
-				log.Error(requestId).Msgf("No Aws ECR registry found for asset %s", assetIdentifier)
-				return "", false, errors.New("no Aws Ecr registry found in anchore dashboard")
-			}
-		}
-		imageName = registryName + assetName + ":" + tagName
-		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
-		if err != nil {
-			log.Error(requestId).Msgf("Could not get analysis status for AWS ECR asset %s", assetIdentifier)
-			return "", false, err
-		}
+		return getAwsEcrAssetAnalysisStatus(assetIdentifier, requestId, tagName)
 	}
 	return imageName, isAnalysed, err
+}
+func getNexusAssetAnalysisStatus(assetIdentifier, requestId, tagName string) (string, bool, error) {
+	var imageName string
+	var isAnalysed bool
+	var hostNameList []string
+	assetIdArr := strings.SplitAfter(assetIdentifier, "://")
+	imageNameStr := assetIdArr[1]
+	hostName := imageNameStr[0:strings.Index(imageNameStr, "/")]
+	assetName := imageNameStr[strings.Index(imageNameStr, ":v2")+len(":v2"):]
+	registryList, err := scan.GetRegistries(requestId)
+	if err != nil {
+		log.Debug(requestId).Msgf("Could not get registry ... using default values")
+		for _, portNumber := range NexusPorts {
+			hostNameList = append(hostNameList, hostName+portNumber)
+		}
+	} else {
+		for _, registry := range *registryList {
+			if strings.HasPrefix(registry.Registry, hostName) {
+				hostNameList = append(hostNameList, registry.Registry)
+			}
+		}
+	}
+	if len(hostNameList) == 0 {
+		log.Error(requestId).Msgf("No Nexus registry found for asset %s", assetIdentifier)
+		return "", false, errors.New("no nexus registry found in anchore dashboard")
+	}
+	for _, hostNameValue := range hostNameList {
+		imageName = hostNameValue + assetName + ":" + tagName
+		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
+		if err == nil {
+			break
+		}
+		log.Debug(requestId).Msgf("Checking Nexus image status for next registry")
+	}
+	if err != nil {
+		log.Error(requestId).Msgf("Could not get analysis status for Nexus asset %s", assetIdentifier)
+		return "", false, err
+	}
+	return imageName, isAnalysed, nil
+}
+
+func getAwsEcrAssetAnalysisStatus(assetIdentifier, requestId, tagName string) (string, bool, error) {
+	splitedAssetIdentifer := strings.Split(assetIdentifier, ":")
+	assetName := strings.Replace(splitedAssetIdentifer[5], "repository", scan.EmptyString, -1)
+	registryList, err := scan.GetRegistries(requestId)
+	registryName := scan.EmptyString
+	if err != nil {
+		log.Debug(requestId).Msgf("Could not get registry ... using default format")
+		registryName = splitedAssetIdentifer[4] + ".dkr." + splitedAssetIdentifer[2] + "." + splitedAssetIdentifer[3] + ".amazonaws.com"
+	} else {
+		for _, registryData := range *registryList {
+			if strings.EqualFold(registryData.RegistryType, "awsecr") && strings.HasPrefix(registryData.Registry, splitedAssetIdentifer[4]) {
+				registryName = registryData.Registry
+				break
+			}
+		}
+		if len(registryName) == 0 {
+			log.Error(requestId).Msgf("No Aws ECR registry found for asset %s", assetIdentifier)
+			return "", false, errors.New("no Aws Ecr registry found in anchore dashboard")
+		}
+	}
+	imageName := registryName + assetName + ":" + tagName
+	_, isAnalysed, err := scan.GetScanStatus(requestId, imageName, scan.RetryCount)
+	if err != nil {
+		log.Error(requestId).Msgf("Could not get analysis status for AWS ECR asset %s", assetIdentifier)
+		return "", false, err
+	}
+	return imageName, isAnalysed, nil
 }
 
 func makeCredentialMap(req *service.ExecuteRequest, requestId string) (scan.AccountCred, error) {
@@ -220,10 +240,10 @@ func validateCredMap(credMap scan.AccountCred, requestId string) error {
 	return scan.GetSystemStatus(requestId)
 }
 
-func buildEvaluations(ctx context.Context, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile) ([]*domain.Evaluation, error) {
+func buildEvaluations(requestId string, vulnList *[]scan.VulnerabilityDetail, asset *domain.Asset, ap *domain.AssetProfile) ([]*domain.Evaluation, error) {
 
 	evalList := []*domain.Evaluation{}
-	evaluationMap := mapToEvaluation(ctx, vulnList, asset, ap, map[string]*domain.Evaluation{})
+	evaluationMap := mapToEvaluation(requestId, vulnList, asset, ap, map[string]*domain.Evaluation{})
 
 	if len(evaluationMap) > 0 {
 		for _, evaluation := range evaluationMap {
