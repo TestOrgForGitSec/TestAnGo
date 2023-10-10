@@ -3,7 +3,7 @@ module github.com/cloudbees-compliance/compliance-hub-plugin-anchore
 go 1.21
 
 require (
-	github.com/cloudbees-compliance/chlog-go v0.4.9
+	github.com/cloudbees-compliance/chlog-go v0.4.9 
 	github.com/cloudbees-compliance/chplugin-go v1.24.0
 	github.com/cloudbees-compliance/chplugin-service-go v1.17.1
 	github.com/cloudbees-compliance/go-common v0.18.0
