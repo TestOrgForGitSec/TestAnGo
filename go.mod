@@ -13,9 +13,18 @@ require (
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.44.0
 	google.golang.org/grpc v1.58.0
 	google.golang.org/protobuf v1.31.0
+	github.com/cloudbees/labs-cve-insights v0.0.0-unpublished
 )
 
 require (
+github.com/fatih/structs v1.1.0 // indirect
+github.com/cloudbees/labs-common v0.0.0-unpublished //indirect
+github.com/mattn/go-runewidth v0.0.9 // indirect
+github.com/olekukonko/tablewriter v0.0.5 // indirect
+github.com/sashabaranov/go-openai v1.15.1 // indirect
+github.com/sirupsen/logrus v1.9.3 // indirect
+github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf // indirect
+jaytaylor.com/html2text v0.0.0-20230321000545-74c2419ad056 // indirect
 	cloud.google.com/go/compute v1.23.0 // indirect
 	github.com/aws/aws-sdk-go v1.45.9 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect

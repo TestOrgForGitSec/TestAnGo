@@ -13,6 +13,7 @@ import (
 	"github.com/cloudbees-compliance/chplugin-service-go/plugin"
 	"github.com/cloudbees-compliance/compliance-hub-plugin-anchore/scan"
 	"github.com/cloudbees-compliance/compliance-hub-plugin-anchore/utilities"
+	"github.com/cloudbees/labs-cve-insights/pkg/insights"
 	"github.com/google/uuid"
 )
 
@@ -56,6 +57,25 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 	ctx = makeSubLogger(req, ctx)
 	requestId := utilities.GetRequestId(ctx)
 	defer log.DestroySubLogger(requestId)
+
+	//
+
+	//
+	log.Debug(requestId).Msgf("Start testing chatgpt")
+	os.Setenv("OPENAI_API_KEY", "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")
+	engine := insights.NewCVEEngine()
+	log.Debug(requestId).Msgf("Env Key is %s", os.Getenv("OPENAI_API_KEY"))
+	cveInsights, err := engine.GetCVEInsights("CVE-2023-34108")
+	if err != nil {
+		log.Error(requestId).Err(err).Msgf("Error when getting cves")
+		return nil, err
+	}
+
+	log.Debug(requestId).Msgf(cveInsights.Summary)
+	log.Debug(requestId).Msgf("End testing chatgpt")
+	//
+
+	//
 
 	receivedAssets, err := assetFetcher.FetchAssets(plugin.AssetFetchRequest{
 		AccountID:          req.Account.Uuid,
