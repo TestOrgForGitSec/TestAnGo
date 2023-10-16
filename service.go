@@ -102,7 +102,21 @@ func processAssets(requestId, tagName string, asset *domain.Asset, profile *doma
 	var checks []*domain.Evaluation
 	assetIdentifier := asset.MasterAsset.Identifier
 	var imageName string
-	imageName, isAnalysed, err := getAnalysisStatus(asset, assetIdentifier, tagName, requestId)
+	var imageDetails []ImageDetails
+	isImageDigest := false
+	log.Debug(requestId).Msgf("Asset Attributes received %s", string(profile.Attributes[:]))
+	if err := json.Unmarshal(profile.Attributes, &imageDetails); err != nil {
+		log.Error(requestId).Err(err).Msgf("Error Parsing Asset Attributes, could not get digest")
+	}
+	if len(imageDetails) != 0 && len(imageDetails[0].ImageDigest) != 0 {
+		tagName = imageDetails[0].ImageDigest
+		isImageDigest = true
+	}
+	if len(tagName) == 0 {
+		return nil, errors.New("invalid asset profile - Digest value or Tag Name not present ")
+	}
+
+	imageName, isAnalysed, err := getAnalysisStatus(asset, assetIdentifier, tagName, requestId, isImageDigest)
 	if err != nil {
 		return nil, err
 	}
@@ -130,27 +144,33 @@ func processAssets(requestId, tagName string, asset *domain.Asset, profile *doma
 	return checks, nil
 }
 
-func getAnalysisStatus(asset *domain.Asset, assetIdentifier string, tagName string, requestId string) (string, bool, error) {
+func getAnalysisStatus(asset *domain.Asset, assetIdentifier string, tagName string, requestId string, isImageDigest bool) (string, bool, error) {
 	var imageName string
 	var isAnalysed bool
 	var err error
-	if strings.Compare(scan.DockerRepo, asset.MasterAsset.SubType) == 0 {
-		assetIdentifier = strings.Replace(assetIdentifier, "library/", scan.EmptyString, -1)
-		imageName = assetIdentifier + ":" + tagName
-		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
-	} else if strings.Compare(scan.JfrogRepo, asset.MasterAsset.SubType) == 0 {
-		assetIdArr := strings.SplitAfter(assetIdentifier, "://")
-		imageNameStr := assetIdArr[1]
-		hostName := imageNameStr[0:strings.Index(imageNameStr, "/")]
-		assetName := imageNameStr[strings.Index(imageNameStr, "/artifactory")+len("/artifactory"):]
-		imageName = hostName + assetName + ":" + tagName
-		_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
-	} else if strings.Compare(scan.NexusRepo, asset.MasterAsset.SubType) == 0 {
-		return getNexusAssetAnalysisStatus(assetIdentifier, requestId, tagName)
-	} else if strings.Compare(scan.AwsEcrRepo, asset.MasterAsset.SubType) == 0 {
-		return getAwsEcrAssetAnalysisStatus(assetIdentifier, requestId, tagName)
+	if isImageDigest {
+		_, isAnalysed, err = scan.GetScanStatus(requestId, tagName, scan.RetryCount)
+		return tagName, isAnalysed, err
+	} else {
+		if strings.Compare(scan.DockerRepo, asset.MasterAsset.SubType) == 0 {
+			assetIdentifier = strings.Replace(assetIdentifier, "library/", scan.EmptyString, -1)
+			imageName = assetIdentifier + ":" + tagName
+			_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
+		} else if strings.Compare(scan.JfrogRepo, asset.MasterAsset.SubType) == 0 {
+			assetIdArr := strings.SplitAfter(assetIdentifier, "://")
+			imageNameStr := assetIdArr[1]
+			hostName := imageNameStr[0:strings.Index(imageNameStr, "/")]
+			assetName := imageNameStr[strings.Index(imageNameStr, "/artifactory")+len("/artifactory"):]
+			imageName = hostName + assetName + ":" + tagName
+			_, isAnalysed, err = scan.GetScanStatus(requestId, imageName, scan.RetryCount)
+		} else if strings.Compare(scan.NexusRepo, asset.MasterAsset.SubType) == 0 {
+			return getNexusAssetAnalysisStatus(assetIdentifier, requestId, tagName)
+		} else if strings.Compare(scan.AwsEcrRepo, asset.MasterAsset.SubType) == 0 {
+			return getAwsEcrAssetAnalysisStatus(assetIdentifier, requestId, tagName)
+		}
+		return imageName, isAnalysed, err
 	}
-	return imageName, isAnalysed, err
+
 }
 func getNexusAssetAnalysisStatus(assetIdentifier, requestId, tagName string) (string, bool, error) {
 	var imageName string
