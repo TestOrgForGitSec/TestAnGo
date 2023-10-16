@@ -102,14 +102,14 @@ func processAssets(requestId, tagName string, asset *domain.Asset, profile *doma
 	var checks []*domain.Evaluation
 	assetIdentifier := asset.MasterAsset.Identifier
 	var imageName string
-	var imageDetails []ImageDetails
+	var imageDetails ImageDetails
 	isImageDigest := false
 	log.Debug(requestId).Msgf("Asset Attributes received %s", string(profile.Attributes[:]))
-	if err := json.Unmarshal(profile.Attributes, &imageDetails); err != nil {
+	if err := json.Unmarshal(profile.Attributes[:], &imageDetails); err != nil {
 		log.Error(requestId).Err(err).Msgf("Error Parsing Asset Attributes, could not get digest")
 	}
-	if len(imageDetails) != 0 && len(imageDetails[0].ImageDigest) != 0 {
-		tagName = imageDetails[0].ImageDigest
+	if len(imageDetails.ImageDigest) != 0 {
+		tagName = imageDetails.ImageDigest
 		isImageDigest = true
 	}
 	if len(tagName) == 0 {
