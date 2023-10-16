@@ -83,6 +83,7 @@ func (as *anchoreScanner) ExecuteAnalyser(ctx context.Context, req *service.Exec
 		log.Debug(requestId).Msgf("Anchore Auth Validate Success")
 		for _, asset := range receivedAssets {
 			for _, profile := range asset.Profiles {
+				log.Debug(requestId).Msgf("Profile asset attributes %s", string(profile.Attributes[:]))
 				log.Debug(requestId).Msgf("Binary Attributes Count : %v", len(profile.BinAttributes))
 				tagName := profile.Identifier
 				checks, err = processAssets(requestId, tagName, asset, profile)
