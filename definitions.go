@@ -19,3 +19,8 @@ var NexusPorts = []string{
 	":5003",
 	":5004",
 }
+
+type ImageDetails struct {
+	ImageDigest string `json:"imageDigest,omitempty"`
+	ImageTag    string `json:"imageTag,omitempty"`
+}
